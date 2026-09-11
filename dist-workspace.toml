@@ -1,5 +1,5 @@
 [workspace]
-members = ["cargo:.", "cargo:mailchimp-api-types", "cargo:mailchimp-api-sdk"]
+members = ["cargo:.", "cargo:mcapi-types", "cargo:mcapi-sdk"]
 
 # Config for 'dist'
 [dist]
