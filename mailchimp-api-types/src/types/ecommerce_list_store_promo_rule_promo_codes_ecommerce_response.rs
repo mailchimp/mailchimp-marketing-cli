@@ -1,0 +1,68 @@
+pub use crate::prelude::*;
+#[allow(unused_imports)]
+use super::*;
+
+/// A collection of the store's promo codes.
+#[derive(Debug, Clone, Serialize, Deserialize, Default, PartialEq, Eq, Hash)]
+pub struct ListStorePromoRulePromoCodesEcommerceResponse {
+    /// A list of link types and descriptions for the API schema documents.
+    #[serde(rename = "_links")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub links: Option<Vec<ListStorePromoRulePromoCodesEcommerceResponseLinksItem>>,
+    /// An array of objects, each representing promo codes defined for a store.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub promo_codes: Option<Vec<ECommercePromoCode>>,
+    /// The store id.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub store_id: Option<String>,
+    /// The total number of items matching the query regardless of pagination.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub total_items: Option<i64>,
+}
+
+impl ListStorePromoRulePromoCodesEcommerceResponse {
+    pub fn builder() -> ListStorePromoRulePromoCodesEcommerceResponseBuilder {
+        <ListStorePromoRulePromoCodesEcommerceResponseBuilder as Default>::default()
+    }
+}
+
+#[derive(Clone, PartialEq, Default, Debug)]
+#[non_exhaustive]
+pub struct ListStorePromoRulePromoCodesEcommerceResponseBuilder {
+    links: Option<Vec<ListStorePromoRulePromoCodesEcommerceResponseLinksItem>>,
+    promo_codes: Option<Vec<ECommercePromoCode>>,
+    store_id: Option<String>,
+    total_items: Option<i64>,
+}
+
+impl ListStorePromoRulePromoCodesEcommerceResponseBuilder {
+    pub fn links(mut self, value: Vec<ListStorePromoRulePromoCodesEcommerceResponseLinksItem>) -> Self {
+        self.links = Some(value);
+        self
+    }
+
+    pub fn promo_codes(mut self, value: Vec<ECommercePromoCode>) -> Self {
+        self.promo_codes = Some(value);
+        self
+    }
+
+    pub fn store_id(mut self, value: impl Into<String>) -> Self {
+        self.store_id = Some(value.into());
+        self
+    }
+
+    pub fn total_items(mut self, value: i64) -> Self {
+        self.total_items = Some(value);
+        self
+    }
+
+    /// Consumes the builder and constructs a [`ListStorePromoRulePromoCodesEcommerceResponse`].
+    pub fn build(self) -> Result<ListStorePromoRulePromoCodesEcommerceResponse, BuildError> {
+        Ok(ListStorePromoRulePromoCodesEcommerceResponse {
+            links: self.links,
+            promo_codes: self.promo_codes,
+            store_id: self.store_id,
+            total_items: self.total_items,
+        })
+    }
+}

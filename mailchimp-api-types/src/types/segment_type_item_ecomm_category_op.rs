@@ -1,0 +1,61 @@
+pub use crate::prelude::*;
+#[allow(unused_imports)]
+use super::*;
+
+/// A member who has purchased from a category/specific item that is/is not a specific name, where the category/item name contains/doesn't contain a specific phrase or string, or a category/item name that starts/ends with a string.
+#[non_exhaustive]
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+pub enum SegmentTypeItemEcommCategoryOp {
+    Is,
+    Not,
+    Contains,
+    Notcontain,
+    Starts,
+    Ends,
+    /// This variant is used for forward compatibility.
+    /// If the server sends a value not recognized by the current SDK version,
+    /// it will be captured here with the raw string value.
+    __Unknown(String),
+}
+impl Serialize for SegmentTypeItemEcommCategoryOp {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
+        match self {
+            Self::Is => serializer.serialize_str("is"),
+            Self::Not => serializer.serialize_str("not"),
+            Self::Contains => serializer.serialize_str("contains"),
+            Self::Notcontain => serializer.serialize_str("notcontain"),
+            Self::Starts => serializer.serialize_str("starts"),
+            Self::Ends => serializer.serialize_str("ends"),
+            Self::__Unknown(val) => serializer.serialize_str(val),
+        }
+    }
+}
+
+impl<'de> Deserialize<'de> for SegmentTypeItemEcommCategoryOp {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Self, D::Error> {
+        let value = String::deserialize(deserializer)?;
+        match value.as_str() {
+            "is" => Ok(Self::Is),
+            "not" => Ok(Self::Not),
+            "contains" => Ok(Self::Contains),
+            "notcontain" => Ok(Self::Notcontain),
+            "starts" => Ok(Self::Starts),
+            "ends" => Ok(Self::Ends),
+            _ => Ok(Self::__Unknown(value)),
+        }
+    }
+}
+
+impl fmt::Display for SegmentTypeItemEcommCategoryOp {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::Is => write!(f, "is"),
+            Self::Not => write!(f, "not"),
+            Self::Contains => write!(f, "contains"),
+            Self::Notcontain => write!(f, "notcontain"),
+            Self::Starts => write!(f, "starts"),
+            Self::Ends => write!(f, "ends"),
+            Self::__Unknown(val) => write!(f, "{}", val),
+        }
+    }
+}
