@@ -1,11 +1,11 @@
 [package]
 name = "fern-cli-sdk"
-version = "0.0.212"
+version = "0.0.213"
 edition = "2021"
 description = "CLI generator — dynamic command surface from OpenAPI and GraphQL schemas"
 license = "Apache-2.0"
-repository = "https://github.com/fern-api/cli-sdk"
-homepage = "https://github.com/fern-api/cli-sdk"
+repository = "https://github.com/mailchimp/mailchimp-marketing-cli"
+homepage = "https://github.com/mailchimp/mailchimp-marketing-cli"
 authors = ["Fern <hey@buildwithfern.com>"]
 keywords = ["cli", "openapi", "graphql", "fern", "codegen"]
 categories = ["command-line-utilities", "web-programming"]
@@ -15,8 +15,8 @@ name = "fern_cli_sdk"
 path = "src/lib.rs"
 
 [[bin]]
-name = "mailchimp"
-path = "cli/mailchimp/main.rs"
+name = "mcapi"
+path = "cli/mcapi/main.rs"
 
 [features]
 # TLS backend selection.
@@ -135,8 +135,8 @@ keyring = { version = "3", features = ["apple-native", "windows-native", "sync-s
 dist = true
 
 # The profile that 'cargo dist' will build with
-[dependencies.mailchimp_sdk]
-path = "mailchimp-sdk"
+[dependencies.mcapi_sdk]
+path = "mcapi-sdk"
 
 [profile.dist]
 inherits = "release"

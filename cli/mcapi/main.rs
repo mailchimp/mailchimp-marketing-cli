@@ -9,8 +9,8 @@ use fern_cli_sdk::openapi::OpenApiBinding;
 use fern_cli_sdk::auth::{BearerAuth};
 
 fn main() {
-    let app = CliApp::new("mailchimp")
-        .auth(BearerAuth::new("bearerToken").env("MAILCHIMP_TOKEN"))
+    let app = CliApp::new("mcapi")
+        .auth(BearerAuth::new("bearerToken").env("MCAPI_TOKEN"))
         .binding(
             OpenApiBinding::new()
                 .spec(include_str!("openapi0.json"))

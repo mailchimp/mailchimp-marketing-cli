@@ -37,7 +37,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -45,7 +45,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.list(None).await;
     /// }
     /// ```
@@ -68,7 +68,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -76,7 +76,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create(
     ///             &CreateRequest {
@@ -117,7 +117,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -125,7 +125,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.get(&"domain_name".to_string(), None).await;
     /// }
     /// ```
@@ -160,7 +160,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -168,7 +168,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_chimp_chatter(
     ///             &ListChimpChatterQueryRequest {
@@ -212,7 +212,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -220,7 +220,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_archive(&"workflow_id".to_string(), None)
     ///         .await;
@@ -256,7 +256,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -264,7 +264,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_pause_all_email(&"workflow_id".to_string(), None)
     ///         .await;
@@ -300,7 +300,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -308,7 +308,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_start_all_email(&"workflow_id".to_string(), None)
     ///         .await;
@@ -344,7 +344,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -352,7 +352,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.list_emails(&"workflow_id".to_string(), None).await;
     /// }
     /// ```
@@ -387,7 +387,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -395,7 +395,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_email(
     ///             &"workflow_id".to_string(),
@@ -440,7 +440,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -448,7 +448,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_email(
     ///             &"workflow_id".to_string(),
@@ -493,7 +493,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -501,7 +501,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_email(
     ///             &"workflow_id".to_string(),
@@ -550,7 +550,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -558,7 +558,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_email_action_pause(
     ///             &"workflow_id".to_string(),
@@ -603,7 +603,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -611,7 +611,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_email_action_start(
     ///             &"workflow_id".to_string(),
@@ -656,7 +656,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -664,7 +664,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_email_queue(
     ///             &"workflow_id".to_string(),
@@ -709,7 +709,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -717,7 +717,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_email_queue(
     ///             &"workflow_id".to_string(),
@@ -767,7 +767,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -775,7 +775,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_email_queue(
     ///             &"workflow_id".to_string(),
@@ -821,7 +821,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -829,7 +829,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_removed_subscribers(&"workflow_id".to_string(), None)
     ///         .await;
@@ -865,7 +865,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -873,7 +873,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_removed_subscriber(
     ///             &"workflow_id".to_string(),
@@ -917,7 +917,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -925,7 +925,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_removed_subscriber(
     ///             &"workflow_id".to_string(),
@@ -969,7 +969,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -977,7 +977,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.delete(&"domain_name".to_string(), None).await;
     /// }
     /// ```
@@ -1011,7 +1011,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1019,7 +1019,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update(
     ///             &"template_id".to_string(),
@@ -1062,7 +1062,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1070,7 +1070,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_cancel_send(&"sms_campaign_id".to_string(), None)
     ///         .await;
@@ -1106,7 +1106,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1114,7 +1114,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_create_resend(
     ///             &"campaign_id".to_string(),
@@ -1157,7 +1157,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1165,7 +1165,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_pause(&"campaign_id".to_string(), None)
     ///         .await;
@@ -1201,7 +1201,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1209,7 +1209,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_replicate(&"campaign_id".to_string(), None)
     ///         .await;
@@ -1245,7 +1245,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1253,7 +1253,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_resume(&"campaign_id".to_string(), None)
     ///         .await;
@@ -1289,7 +1289,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1297,7 +1297,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_schedule(
     ///             &"sms_campaign_id".to_string(),
@@ -1340,7 +1340,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1348,7 +1348,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_send(&"sms_campaign_id".to_string(), None)
     ///         .await;
@@ -1384,7 +1384,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1392,7 +1392,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_test(
     ///             &"campaign_id".to_string(),
@@ -1436,7 +1436,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1444,7 +1444,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_unschedule(&"campaign_id".to_string(), None)
     ///         .await;
@@ -1482,7 +1482,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1490,7 +1490,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_content(
     ///             &"sms_campaign_id".to_string(),
@@ -1537,7 +1537,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1545,7 +1545,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .upsert_content(
     ///             &"sms_campaign_id".to_string(),
@@ -1591,7 +1591,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1599,7 +1599,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_feedback(
     ///             &"campaign_id".to_string(),
@@ -1646,7 +1646,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1654,7 +1654,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_feedback(
     ///             &"campaign_id".to_string(),
@@ -1702,7 +1702,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1710,7 +1710,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_feedback(
     ///             &"campaign_id".to_string(),
@@ -1760,7 +1760,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1768,7 +1768,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_feedback(&"campaign_id".to_string(), &"feedback_id".to_string(), None)
     ///         .await;
@@ -1806,7 +1806,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1814,7 +1814,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_feedback(
     ///             &"campaign_id".to_string(),
@@ -1861,7 +1861,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1869,7 +1869,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_send_checklist(
     ///             &"campaign_id".to_string(),
@@ -1916,7 +1916,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1924,7 +1924,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_verify_script_installation(&"connected_site_id".to_string(), None)
     ///         .await;
@@ -1968,7 +1968,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -1976,7 +1976,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_messages(
     ///             &"conversation_id".to_string(),
@@ -2032,7 +2032,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2040,7 +2040,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_message(
     ///             &"conversation_id".to_string(),
@@ -2093,7 +2093,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2101,7 +2101,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_journey_step_action_trigger(
     ///             1,
@@ -2156,7 +2156,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2164,7 +2164,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_orders(
     ///             &ListOrdersQueryRequest {
@@ -2224,7 +2224,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2232,7 +2232,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_stores(
     ///             &ListStoresQueryRequest {
@@ -2280,7 +2280,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2288,7 +2288,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store(
     ///             &CreateStoreRequest {
@@ -2343,7 +2343,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2351,7 +2351,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store(
     ///             &"store_id".to_string(),
@@ -2398,7 +2398,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2406,7 +2406,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.delete_store(&"store_id".to_string(), None).await;
     /// }
     /// ```
@@ -2440,7 +2440,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2448,7 +2448,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store(
     ///             &"store_id".to_string(),
@@ -2495,7 +2495,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2503,7 +2503,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_carts(
     ///             &"store_id".to_string(),
@@ -2554,7 +2554,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2562,7 +2562,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_cart(
     ///             &"store_id".to_string(),
@@ -2624,7 +2624,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2632,7 +2632,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_cart(
     ///             &"store_id".to_string(),
@@ -2682,7 +2682,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2690,7 +2690,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_cart(&"store_id".to_string(), &"cart_id".to_string(), None)
     ///         .await;
@@ -2728,7 +2728,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2736,7 +2736,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_cart(
     ///             &"store_id".to_string(),
@@ -2786,7 +2786,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2794,7 +2794,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_cart_lines(
     ///             &"store_id".to_string(),
@@ -2848,7 +2848,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2856,7 +2856,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_cart_line(
     ///             &"store_id".to_string(),
@@ -2909,7 +2909,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2917,7 +2917,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_cart_line(
     ///             &"store_id".to_string(),
@@ -2973,7 +2973,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -2981,7 +2981,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_cart_line(
     ///             &"store_id".to_string(),
@@ -3029,7 +3029,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3037,7 +3037,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_cart_line(
     ///             &"store_id".to_string(),
@@ -3092,7 +3092,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3100,7 +3100,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_customers(
     ///             &"store_id".to_string(),
@@ -3153,7 +3153,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3161,7 +3161,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_customer(
     ///             &"store_id".to_string(),
@@ -3215,7 +3215,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3223,7 +3223,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_customer(
     ///             &"store_id".to_string(),
@@ -3276,7 +3276,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3284,7 +3284,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .upsert_store_customer(
     ///             &"store_id".to_string(),
@@ -3333,7 +3333,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3341,7 +3341,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_customer(&"store_id".to_string(), &"customer_id".to_string(), None)
     ///         .await;
@@ -3382,7 +3382,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3390,7 +3390,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_customer(
     ///             &"store_id".to_string(),
@@ -3446,7 +3446,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3454,7 +3454,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_orders(
     ///             &"store_id".to_string(),
@@ -3513,7 +3513,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3521,7 +3521,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_order(
     ///             &"store_id".to_string(),
@@ -3602,7 +3602,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3610,7 +3610,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_order(
     ///             &"store_id".to_string(),
@@ -3660,7 +3660,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3668,7 +3668,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_order(&"store_id".to_string(), &"order_id".to_string(), None)
     ///         .await;
@@ -3706,7 +3706,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3714,7 +3714,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_order(
     ///             &"store_id".to_string(),
@@ -3764,7 +3764,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3772,7 +3772,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_order_lines(
     ///             &"store_id".to_string(),
@@ -3829,7 +3829,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3837,7 +3837,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_order_line(
     ///             &"store_id".to_string(),
@@ -3895,7 +3895,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3903,7 +3903,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_order_line(
     ///             &"store_id".to_string(),
@@ -3959,7 +3959,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -3967,7 +3967,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_order_line(
     ///             &"store_id".to_string(),
@@ -4015,7 +4015,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4023,7 +4023,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_order_line(
     ///             &"store_id".to_string(),
@@ -4077,7 +4077,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4085,7 +4085,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_products(
     ///             &"store_id".to_string(),
@@ -4136,7 +4136,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4144,7 +4144,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_product(
     ///             &"store_id".to_string(),
@@ -4210,7 +4210,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4218,7 +4218,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_product(
     ///             &"store_id".to_string(),
@@ -4268,7 +4268,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4276,7 +4276,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .upsert_store_product(
     ///             &"store_id".to_string(),
@@ -4332,7 +4332,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4340,7 +4340,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_product(&"store_id".to_string(), &"product_id".to_string(), None)
     ///         .await;
@@ -4378,7 +4378,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4386,7 +4386,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_product(
     ///             &"store_id".to_string(),
@@ -4436,7 +4436,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4444,7 +4444,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_product_images(
     ///             &"store_id".to_string(),
@@ -4501,7 +4501,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4509,7 +4509,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_product_image(
     ///             &"store_id".to_string(),
@@ -4563,7 +4563,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4571,7 +4571,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_product_image(
     ///             &"store_id".to_string(),
@@ -4627,7 +4627,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4635,7 +4635,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_product_image(
     ///             &"store_id".to_string(),
@@ -4683,7 +4683,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4691,7 +4691,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_product_image(
     ///             &"store_id".to_string(),
@@ -4746,7 +4746,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4754,7 +4754,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_product_variants(
     ///             &"store_id".to_string(),
@@ -4811,7 +4811,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4819,7 +4819,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_product_variant(
     ///             &"store_id".to_string(),
@@ -4879,7 +4879,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4887,7 +4887,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_product_variant(
     ///             &"store_id".to_string(),
@@ -4943,7 +4943,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -4951,7 +4951,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .upsert_store_product_variant(
     ///             &"store_id".to_string(),
@@ -5003,7 +5003,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5011,7 +5011,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_product_variant(
     ///             &"store_id".to_string(),
@@ -5059,7 +5059,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5067,7 +5067,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_product_variant(
     ///             &"store_id".to_string(),
@@ -5121,7 +5121,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5129,7 +5129,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_promo_rules(
     ///             &"store_id".to_string(),
@@ -5180,7 +5180,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5188,7 +5188,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_store_promo_rule(
     ///             &"store_id".to_string(),
@@ -5244,7 +5244,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5252,7 +5252,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_promo_rule(
     ///             &"store_id".to_string(),
@@ -5305,7 +5305,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5313,7 +5313,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_promo_rule(&"store_id".to_string(), &"promo_rule_id".to_string(), None)
     ///         .await;
@@ -5354,7 +5354,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5362,7 +5362,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_promo_rule(
     ///             &"store_id".to_string(),
@@ -5415,7 +5415,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5423,7 +5423,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_store_promo_rule_promo_codes(
     ///             &"store_id".to_string(),
@@ -5480,7 +5480,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5488,7 +5488,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.create_store_promo_rule_promo_code(&"store_id".to_string(), &"promo_rule_id".to_string(), &CreateStorePromoRulePromoCodeRequest {
     ///         code: "summersale".to_string(),
     ///         id: "id".to_string(),
@@ -5539,7 +5539,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5547,7 +5547,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_store_promo_rule_promo_code(
     ///             &"store_id".to_string(),
@@ -5603,7 +5603,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5611,7 +5611,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_store_promo_rule_promo_code(
     ///             &"store_id".to_string(),
@@ -5659,7 +5659,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5667,7 +5667,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_store_promo_rule_promo_code(
     ///             &"store_id".to_string(),
@@ -5726,7 +5726,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5734,7 +5734,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_files(
     ///             &ListFilesQueryRequest {
@@ -5794,7 +5794,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5802,7 +5802,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_file(
     ///             &CreateFileRequest {
@@ -5847,7 +5847,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5855,7 +5855,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_file(
     ///             &"file_id".to_string(),
@@ -5902,7 +5902,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5910,7 +5910,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.delete_file(&"file_id".to_string(), None).await;
     /// }
     /// ```
@@ -5944,7 +5944,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -5952,7 +5952,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_file(
     ///             &"file_id".to_string(),
@@ -6001,7 +6001,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6009,7 +6009,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_folders(
     ///             &ListFoldersQueryRequest {
@@ -6063,7 +6063,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6071,7 +6071,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_folder(
     ///             &CreateFolderRequest {
@@ -6114,7 +6114,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6122,7 +6122,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_folder(
     ///             &"folder_id".to_string(),
@@ -6169,7 +6169,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6177,7 +6177,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.delete_folder(&"folder_id".to_string(), None).await;
     /// }
     /// ```
@@ -6211,7 +6211,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6219,7 +6219,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_folder(
     ///             &"folder_id".to_string(),
@@ -6272,7 +6272,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6280,7 +6280,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_folder_files(
     ///             &"folder_id".to_string(),
@@ -6343,7 +6343,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6351,7 +6351,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_publish(&"page_id".to_string(), None)
     ///         .await;
@@ -6387,7 +6387,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6395,7 +6395,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_unpublish(&"page_id".to_string(), None)
     ///         .await;
@@ -6433,7 +6433,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6441,7 +6441,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_content(
     ///             &"page_id".to_string(),
@@ -6490,7 +6490,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6498,7 +6498,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .batch_subscribe_or_unsubscribe(
     ///             &"list_id".to_string(),
@@ -6553,7 +6553,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6561,7 +6561,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_abuse_reports(
     ///             &"campaign_id".to_string(),
@@ -6611,7 +6611,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6619,7 +6619,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_abuse_report(
     ///             &"campaign_id".to_string(),
@@ -6672,7 +6672,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6680,7 +6680,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_activity(
     ///             &"list_id".to_string(),
@@ -6733,7 +6733,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6741,7 +6741,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_clients(
     ///             &"list_id".to_string(),
@@ -6794,7 +6794,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6802,7 +6802,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_growth_history(
     ///             &"list_id".to_string(),
@@ -6860,7 +6860,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6868,7 +6868,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_growth_history(
     ///             &"list_id".to_string(),
@@ -6924,7 +6924,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6932,7 +6932,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_interest_categories(
     ///             &"list_id".to_string(),
@@ -6989,7 +6989,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -6997,7 +6997,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_interest_category(
     ///             &"list_id".to_string(),
@@ -7045,7 +7045,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7053,7 +7053,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_interest_category(
     ///             &"list_id".to_string(),
@@ -7106,7 +7106,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7114,7 +7114,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_interest_category(
     ///             &"list_id".to_string(),
@@ -7159,7 +7159,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7167,7 +7167,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_interest_category(
     ///             &"list_id".to_string(),
@@ -7220,7 +7220,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7228,7 +7228,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_interest_category_interests(
     ///             &"list_id".to_string(),
@@ -7285,7 +7285,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7293,7 +7293,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_interest_category_interest(
     ///             &"list_id".to_string(),
@@ -7346,7 +7346,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7354,7 +7354,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_interest_category_interest(
     ///             &"list_id".to_string(),
@@ -7410,7 +7410,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7418,7 +7418,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_interest_category_interest(
     ///             &"list_id".to_string(),
@@ -7466,7 +7466,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7474,7 +7474,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_interest_category_interest(
     ///             &"list_id".to_string(),
@@ -7528,7 +7528,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7536,7 +7536,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_locations(
     ///             &"campaign_id".to_string(),
@@ -7606,7 +7606,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7614,7 +7614,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_members(
     ///             &"list_id".to_string(),
@@ -7696,7 +7696,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7704,7 +7704,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_member(
     ///             &"list_id".to_string(),
@@ -7769,7 +7769,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7777,7 +7777,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_member(
     ///             &"list_id".to_string(),
@@ -7828,7 +7828,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7836,7 +7836,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .upsert_member(
     ///             &"list_id".to_string(),
@@ -7902,7 +7902,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7910,7 +7910,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_member(&"list_id".to_string(), &"subscriber_hash".to_string(), None)
     ///         .await;
@@ -7949,7 +7949,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -7957,7 +7957,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_member(
     ///             &"list_id".to_string(),
@@ -8008,7 +8008,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8016,7 +8016,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_member_action_delete_permanent(
     ///             &"list_id".to_string(),
@@ -8064,7 +8064,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8072,7 +8072,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_activity(
     ///             &"list_id".to_string(),
@@ -8129,7 +8129,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8137,7 +8137,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_activity_feed(
     ///             &"list_id".to_string(),
@@ -8200,7 +8200,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8208,7 +8208,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_events(
     ///             &"list_id".to_string(),
@@ -8262,7 +8262,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8270,7 +8270,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_member_event(
     ///             &"list_id".to_string(),
@@ -8321,7 +8321,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8329,7 +8329,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_goals(
     ///             &"list_id".to_string(),
@@ -8385,7 +8385,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8393,7 +8393,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_notes(
     ///             &"list_id".to_string(),
@@ -8451,7 +8451,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8459,7 +8459,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_member_note(
     ///             &"list_id".to_string(),
@@ -8508,7 +8508,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8516,7 +8516,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_member_note(
     ///             &"list_id".to_string(),
@@ -8572,7 +8572,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8580,7 +8580,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_member_note(
     ///             &"list_id".to_string(),
@@ -8628,7 +8628,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8636,7 +8636,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_member_note(
     ///             &"list_id".to_string(),
@@ -8691,7 +8691,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8699,7 +8699,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_member_tags(
     ///             &"list_id".to_string(),
@@ -8753,7 +8753,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8761,7 +8761,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_member_tag(
     ///             &"list_id".to_string(),
@@ -8816,7 +8816,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8824,7 +8824,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_merge_fields(
     ///             &"list_id".to_string(),
@@ -8879,7 +8879,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8887,7 +8887,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_merge_field(
     ///             &"list_id".to_string(),
@@ -8941,7 +8941,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -8949,7 +8949,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_merge_field(
     ///             &"list_id".to_string(),
@@ -8999,7 +8999,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9007,7 +9007,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_merge_field(&"list_id".to_string(), &"merge_id".to_string(), None)
     ///         .await;
@@ -9045,7 +9045,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9053,7 +9053,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_merge_field(
     ///             &"list_id".to_string(),
@@ -9111,7 +9111,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9119,7 +9119,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_segments(
     ///             &"list_id".to_string(),
@@ -9191,7 +9191,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9199,7 +9199,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_segment(
     ///             &"list_id".to_string(),
@@ -9250,7 +9250,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9258,7 +9258,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_segment(
     ///             &"list_id".to_string(),
@@ -9317,7 +9317,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9325,7 +9325,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .batch_add_or_remove_members(
     ///             &"list_id".to_string(),
@@ -9371,7 +9371,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9379,7 +9379,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_segment(&"list_id".to_string(), &"segment_id".to_string(), None)
     ///         .await;
@@ -9417,7 +9417,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9425,7 +9425,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_segment(
     ///             &"list_id".to_string(),
@@ -9478,7 +9478,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9486,7 +9486,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_segment_members(
     ///             &"list_id".to_string(),
@@ -9549,7 +9549,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9557,7 +9557,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_segment_member(
     ///             &"list_id".to_string(),
@@ -9604,7 +9604,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9612,7 +9612,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_segment_member(
     ///             &"list_id".to_string(),
@@ -9658,7 +9658,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9666,7 +9666,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.list_signup_forms(&"list_id".to_string(), None).await;
     /// }
     /// ```
@@ -9700,7 +9700,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9708,7 +9708,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_signup_form(
     ///             &"list_id".to_string(),
@@ -9754,7 +9754,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9762,7 +9762,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_surveys(
     ///             &ListSurveysQueryRequest {
@@ -9811,7 +9811,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9819,7 +9819,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_survey(
     ///             &"list_id".to_string(),
@@ -9864,7 +9864,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9872,7 +9872,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_survey(
     ///             &"survey_id".to_string(),
@@ -9920,7 +9920,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9928,7 +9928,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_survey(&"list_id".to_string(), &"survey_id".to_string(), None)
     ///         .await;
@@ -9966,7 +9966,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -9974,7 +9974,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_survey(
     ///             &"list_id".to_string(),
@@ -10020,7 +10020,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10028,7 +10028,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_list_survey_action_create_email(
     ///             &"list_id".to_string(),
@@ -10073,7 +10073,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10081,7 +10081,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_list_survey_action_publish(&"list_id".to_string(), &"survey_id".to_string(), None)
     ///         .await;
@@ -10122,7 +10122,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10130,7 +10130,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_list_survey_action_unpublish(&"list_id".to_string(), &"survey_id".to_string(), None)
     ///         .await;
@@ -10171,7 +10171,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10179,7 +10179,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_list_survey_action_replicate(
     ///             &"list_id".to_string(),
@@ -10228,7 +10228,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10236,7 +10236,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_tag_search(
     ///             &"list_id".to_string(),
@@ -10281,7 +10281,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10289,7 +10289,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client.list_webhooks(&"list_id".to_string(), None).await;
     /// }
     /// ```
@@ -10323,7 +10323,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10331,7 +10331,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_webhook(
     ///             &"list_id".to_string(),
@@ -10375,7 +10375,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10383,7 +10383,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_webhook(&"list_id".to_string(), &"webhook_id".to_string(), None)
     ///         .await;
@@ -10421,7 +10421,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10429,7 +10429,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .delete_webhook(&"list_id".to_string(), &"webhook_id".to_string(), None)
     ///         .await;
@@ -10467,7 +10467,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10475,7 +10475,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .update_webhook(
     ///             &"list_id".to_string(),
@@ -10525,7 +10525,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10533,7 +10533,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_facebook_ads(
     ///             &ListFacebookAdsQueryRequest {
@@ -10588,7 +10588,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10596,7 +10596,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_facebook_ad(
     ///             &"outreach_id".to_string(),
@@ -10648,7 +10648,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10656,7 +10656,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_facebook_ad_ecommerce_product_activity(
     ///             &"outreach_id".to_string(),
@@ -10715,7 +10715,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10723,7 +10723,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_landing_pages(
     ///             &ListLandingPagesQueryRequest {
@@ -10774,7 +10774,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10782,7 +10782,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_landing_page(
     ///             &"outreach_id".to_string(),
@@ -10831,7 +10831,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10839,7 +10839,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_survey_questions(
     ///             &"survey_id".to_string(),
@@ -10889,7 +10889,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10897,7 +10897,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_survey_question(
     ///             &"survey_id".to_string(),
@@ -10953,7 +10953,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -10961,7 +10961,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_survey_question_answers(
     ///             &"survey_id".to_string(),
@@ -11023,7 +11023,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11031,7 +11031,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_survey_responses(
     ///             &"survey_id".to_string(),
@@ -11088,7 +11088,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11096,7 +11096,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_survey_respons(&"survey_id".to_string(), &"response_id".to_string(), None)
     ///         .await;
@@ -11138,7 +11138,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11146,7 +11146,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_advice(
     ///             &"campaign_id".to_string(),
@@ -11200,7 +11200,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11208,7 +11208,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_click_details(
     ///             &"campaign_id".to_string(),
@@ -11269,7 +11269,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11277,7 +11277,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_click_detail(
     ///             &"campaign_id".to_string(),
@@ -11333,7 +11333,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11341,7 +11341,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_click_detail_members(
     ///             &"campaign_id".to_string(),
@@ -11401,7 +11401,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11409,7 +11409,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_click_detail_member(
     ///             &"campaign_id".to_string(),
@@ -11465,7 +11465,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11473,7 +11473,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_domain_performance(
     ///             &"campaign_id".to_string(),
@@ -11525,7 +11525,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11533,7 +11533,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_ecommerce_product_activity(
     ///             &"campaign_id".to_string(),
@@ -11588,7 +11588,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11596,7 +11596,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_eepurl(
     ///             &"campaign_id".to_string(),
@@ -11649,7 +11649,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11657,7 +11657,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_email_activity(
     ///             &"campaign_id".to_string(),
@@ -11717,7 +11717,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11725,7 +11725,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_email_activity(
     ///             &"campaign_id".to_string(),
@@ -11789,7 +11789,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11797,7 +11797,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_open_details(
     ///             &"campaign_id".to_string(),
@@ -11860,7 +11860,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11868,7 +11868,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_open_detail(
     ///             &"campaign_id".to_string(),
@@ -11926,7 +11926,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11934,7 +11934,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_sent_to(
     ///             &"campaign_id".to_string(),
@@ -11988,7 +11988,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -11996,7 +11996,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_sent_to(
     ///             &"campaign_id".to_string(),
@@ -12047,7 +12047,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -12055,7 +12055,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_sub_reports(
     ///             &"campaign_id".to_string(),
@@ -12106,7 +12106,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -12114,7 +12114,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_unsubscribed(
     ///             &"campaign_id".to_string(),
@@ -12168,7 +12168,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -12176,7 +12176,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .get_unsubscribed(
     ///             &"campaign_id".to_string(),
@@ -12230,7 +12230,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -12238,7 +12238,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .list_default_content(
     ///             &"template_id".to_string(),
@@ -12285,7 +12285,7 @@ impl ApiClient {
     /// # Examples
     ///
     /// ```no_run
-    /// use mailchimp_sdk::prelude::*;
+    /// use mcapi_sdk::prelude::*;
     ///
     /// #[tokio::main]
     /// async fn main() {
@@ -12293,7 +12293,7 @@ impl ApiClient {
     ///         token: Some("<token>".to_string()),
     ///         ..Default::default()
     ///     };
-    ///     let client = MailchimpClient::new(config).expect("Failed to build client");
+    ///     let client = McapiClient::new(config).expect("Failed to build client");
     ///     client
     ///         .create_action_verify(
     ///             &"domain_name".to_string(),

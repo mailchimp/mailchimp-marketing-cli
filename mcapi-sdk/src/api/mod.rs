@@ -11,4 +11,4 @@ pub mod resources;
 
 pub use resources::{ApiClient, AudiencesClient};
 
-pub use mailchimp_types::*;
+pub use mcapi_types::*;

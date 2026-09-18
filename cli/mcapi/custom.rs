@@ -10,7 +10,7 @@
 //! to get a fully-wired SDK client that inherits the CLI's auth,
 //! retries, TLS, and global headers. Use `super::sdk::block_on(future)`
 //! to run async SDK calls from synchronous handler context.
-//! Types are available via `mailchimp_sdk::api::*`.
+//! Types are available via `mcapi_sdk::api::*`.
 
 use fern_cli_sdk::app::CliApp;
 
@@ -21,7 +21,7 @@ use fern_cli_sdk::app::CliApp;
 pub fn register(app: CliApp) -> CliApp {
     // Example: typed SDK client usage with the co-generated SDK.
     //
-    // use mailchimp_sdk::api::*;
+    // use mcapi_sdk::api::*;
     //
     // let app = app.command(
     //     clap::Command::new("get-plant")

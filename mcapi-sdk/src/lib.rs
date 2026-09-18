@@ -5,7 +5,7 @@
 //! ## Getting Started
 //!
 //! ```rust
-//! use mailchimp_sdk::prelude::*;
+//! use mcapi_sdk::prelude::*;
 //!
 //! #[tokio::main]
 //! async fn main() {
@@ -13,7 +13,7 @@
 //!         token: Some("<token>".to_string()),
 //!         ..Default::default()
 //!     };
-//!     let client = MailchimpClient::new(config).expect("Failed to build client");
+//!     let client = McapiClient::new(config).expect("Failed to build client");
 //!     client
 //!         .audiences
 //!         .get_audience_contact_list(

@@ -1,43 +1,43 @@
 # Mailchimp API CLI Reference
 
-Full command reference for `mailchimp`.
+Full command reference for `mcapi`.
 
 ## Commands
 
-- [`mailchimp account-exports`](#mailchimp-account-exports)
-- [`mailchimp activity-feed`](#mailchimp-activity-feed)
-- [`mailchimp audiences`](#mailchimp-audiences)
-- [`mailchimp authorized-apps`](#mailchimp-authorized-apps)
-- [`mailchimp automations`](#mailchimp-automations)
-- [`mailchimp batch-webhooks`](#mailchimp-batch-webhooks)
-- [`mailchimp batches`](#mailchimp-batches)
-- [`mailchimp campaign-folders`](#mailchimp-campaign-folders)
-- [`mailchimp campaigns`](#mailchimp-campaigns)
-- [`mailchimp connected-sites`](#mailchimp-connected-sites)
-- [`mailchimp conversations`](#mailchimp-conversations)
-- [`mailchimp customer-journeys`](#mailchimp-customer-journeys)
-- [`mailchimp ecommerce`](#mailchimp-ecommerce)
-- [`mailchimp facebook-ads`](#mailchimp-facebook-ads)
-- [`mailchimp file-manager`](#mailchimp-file-manager)
-- [`mailchimp landing-pages`](#mailchimp-landing-pages)
-- [`mailchimp lists`](#mailchimp-lists)
-- [`mailchimp ping`](#mailchimp-ping)
-- [`mailchimp reporting`](#mailchimp-reporting)
-- [`mailchimp reports`](#mailchimp-reports)
-- [`mailchimp root`](#mailchimp-root)
-- [`mailchimp search-campaigns`](#mailchimp-search-campaigns)
-- [`mailchimp search-members`](#mailchimp-search-members)
-- [`mailchimp sms-campaigns`](#mailchimp-sms-campaigns)
-- [`mailchimp surveys`](#mailchimp-surveys)
-- [`mailchimp template-folders`](#mailchimp-template-folders)
-- [`mailchimp templates`](#mailchimp-templates)
-- [`mailchimp verified-domains`](#mailchimp-verified-domains)
+- [`mcapi account-exports`](#mcapi-account-exports)
+- [`mcapi activity-feed`](#mcapi-activity-feed)
+- [`mcapi audiences`](#mcapi-audiences)
+- [`mcapi authorized-apps`](#mcapi-authorized-apps)
+- [`mcapi automations`](#mcapi-automations)
+- [`mcapi batch-webhooks`](#mcapi-batch-webhooks)
+- [`mcapi batches`](#mcapi-batches)
+- [`mcapi campaign-folders`](#mcapi-campaign-folders)
+- [`mcapi campaigns`](#mcapi-campaigns)
+- [`mcapi connected-sites`](#mcapi-connected-sites)
+- [`mcapi conversations`](#mcapi-conversations)
+- [`mcapi customer-journeys`](#mcapi-customer-journeys)
+- [`mcapi ecommerce`](#mcapi-ecommerce)
+- [`mcapi facebook-ads`](#mcapi-facebook-ads)
+- [`mcapi file-manager`](#mcapi-file-manager)
+- [`mcapi landing-pages`](#mcapi-landing-pages)
+- [`mcapi lists`](#mcapi-lists)
+- [`mcapi ping`](#mcapi-ping)
+- [`mcapi reporting`](#mcapi-reporting)
+- [`mcapi reports`](#mcapi-reports)
+- [`mcapi root`](#mcapi-root)
+- [`mcapi search-campaigns`](#mcapi-search-campaigns)
+- [`mcapi search-members`](#mcapi-search-members)
+- [`mcapi sms-campaigns`](#mcapi-sms-campaigns)
+- [`mcapi surveys`](#mcapi-surveys)
+- [`mcapi template-folders`](#mcapi-template-folders)
+- [`mcapi templates`](#mcapi-templates)
+- [`mcapi verified-domains`](#mcapi-verified-domains)
 
 ---
 
-### `mailchimp account-exports`
+### `mcapi account-exports`
 
-#### `mailchimp account-exports create`
+#### `mcapi account-exports create`
 
 Create a new account export in your Mailchimp account.
 
@@ -47,7 +47,7 @@ Create a new account export in your Mailchimp account.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp account-exports get`
+#### `mcapi account-exports get`
 
 Get information about a specific account export.
 
@@ -59,7 +59,7 @@ Get information about a specific account export.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--export-id` | `string` | Yes | The unique id for the account export. |
 
-#### `mailchimp account-exports list`
+#### `mcapi account-exports list`
 
 Get a list of account exports for a given account.
 
@@ -74,15 +74,15 @@ Get a list of account exports for a given account.
 
 ---
 
-### `mailchimp activity-feed`
+### `mcapi activity-feed`
 
-#### `mailchimp activity-feed list`
+#### `mcapi activity-feed list`
 
 Get information about the activity feed endpoint's resources.
 
 `GET /3.0/activity-feed`
 
-#### `mailchimp activity-feed list-chimp-chatter`
+#### `mcapi activity-feed list-chimp-chatter`
 
 Return the Chimp Chatter for this account ordered by most recent.
 
@@ -95,9 +95,9 @@ Return the Chimp Chatter for this account ordered by most recent.
 
 ---
 
-### `mailchimp audiences`
+### `mcapi audiences`
 
-#### `mailchimp audiences create-audience-contact`
+#### `mcapi audiences create-audience-contact`
 
 Create a new omni-channel contact for an audience.
 
@@ -110,7 +110,7 @@ Create a new omni-channel contact for an audience.
 | `--data-mode` | `historical | live` | No | Indicates the data processing mode. In `historical` mode, contact data changes do not trigger automations or webhooks. In `live mode`, such changes do trigger them. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp audiences get-audience-contact`
+#### `mcapi audiences get-audience-contact`
 
 Retrieve a specific omni-channel contact in an audience.
 
@@ -123,7 +123,7 @@ Retrieve a specific omni-channel contact in an audience.
 | `--audience-id` | `string` | Yes | The unique ID for the audience. |
 | `--contact-id` | `string` | Yes | A unique identifier for the contact, which can be a Mailchimp contact ID or a channel hash. A channel hash must follow the format email:[md5_hash] (where the hash is the MD5 of the lowercased email address) or sms:[sha256_hash] (where the hash is the SHA256 of the E.164-formatted phone number). |
 
-#### `mailchimp audiences get-audience-contact-list`
+#### `mcapi audiences get-audience-contact-list`
 
 Get a list of omni-channel contacts for a given audience.
 
@@ -143,7 +143,7 @@ Get a list of omni-channel contacts for a given audience.
 | `--sort-field` | `created_at | updated_at` | No | Specifies the field to sort the returned contacts by. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp audiences patch-audience-contact`
+#### `mcapi audiences patch-audience-contact`
 
 Update an existing omni-channel contact.
 
@@ -157,7 +157,7 @@ Update an existing omni-channel contact.
 | `--data-mode` | `historical | live` | No | Indicates the data processing mode. In `historical` mode, contact data changes do not trigger automations or webhooks. In `live mode`, such changes do trigger them. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp audiences post-audiences-contacts-actions-archive`
+#### `mcapi audiences post-audiences-contacts-actions-archive`
 
 Archives a Contact.
 
@@ -168,7 +168,7 @@ Archives a Contact.
 | `--audience-id` | `string` | Yes | The unique ID for the audience. |
 | `--contact-id` | `string` | Yes | The unique id for the contact. |
 
-#### `mailchimp audiences post-audiences-contacts-actions-forget`
+#### `mcapi audiences post-audiences-contacts-actions-forget`
 
 Forgets a Contact.
 
@@ -181,9 +181,9 @@ Forgets a Contact.
 
 ---
 
-### `mailchimp authorized-apps`
+### `mcapi authorized-apps`
 
-#### `mailchimp authorized-apps get`
+#### `mcapi authorized-apps get`
 
 Get information about a specific authorized application.
 
@@ -195,7 +195,7 @@ Get information about a specific authorized application.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--app-id` | `string` | Yes | The unique id for the connected authorized application. |
 
-#### `mailchimp authorized-apps list`
+#### `mcapi authorized-apps list`
 
 Get a list of an account's registered, connected applications.
 
@@ -210,9 +210,9 @@ Get a list of an account's registered, connected applications.
 
 ---
 
-### `mailchimp automations`
+### `mcapi automations`
 
-#### `mailchimp automations create`
+#### `mcapi automations create`
 
 Create a new classic automation in your Mailchimp account.
 
@@ -222,7 +222,7 @@ Create a new classic automation in your Mailchimp account.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp automations create-action-archive`
+#### `mcapi automations create-action-archive`
 
 Archiving will permanently end your automation and keep the report data. You’ll be able to replicate your archived automation, but you can’t restart it.
 
@@ -232,7 +232,7 @@ Archiving will permanently end your automation and keep the report data. You’l
 |------|------|----------|-------------|
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations create-action-pause-all-email`
+#### `mcapi automations create-action-pause-all-email`
 
 Pause all emails in a specific classic automation workflow.
 
@@ -242,7 +242,7 @@ Pause all emails in a specific classic automation workflow.
 |------|------|----------|-------------|
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations create-action-start-all-email`
+#### `mcapi automations create-action-start-all-email`
 
 Start all emails in a classic automation workflow.
 
@@ -252,7 +252,7 @@ Start all emails in a classic automation workflow.
 |------|------|----------|-------------|
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations create-email-action-pause`
+#### `mcapi automations create-email-action-pause`
 
 Pause an automated email.
 
@@ -263,7 +263,7 @@ Pause an automated email.
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 
-#### `mailchimp automations create-email-action-start`
+#### `mcapi automations create-email-action-start`
 
 Start an automated email.
 
@@ -274,7 +274,7 @@ Start an automated email.
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 
-#### `mailchimp automations create-email-queue`
+#### `mcapi automations create-email-queue`
 
 Manually add a subscriber to a workflow, bypassing the default trigger settings. You can also use this endpoint to trigger a series of automated emails in an API 3.0 workflow type.
 
@@ -286,7 +286,7 @@ Manually add a subscriber to a workflow, bypassing the default trigger settings.
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp automations create-removed-subscriber`
+#### `mcapi automations create-removed-subscriber`
 
 Remove a subscriber from a specific classic automation workflow. You can remove a subscriber at any point in an automation workflow, regardless of how many emails they've been sent from that workflow. Once they're removed, they can never be added back to the same workflow.
 
@@ -297,7 +297,7 @@ Remove a subscriber from a specific classic automation workflow. You can remove 
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp automations delete-email`
+#### `mcapi automations delete-email`
 
 Removes an individual classic automation workflow email. Emails from certain workflow types, including the Abandoned Cart Email (abandonedCart) and Product Retargeting Email (abandonedBrowse) Workflows, cannot be deleted.
 
@@ -308,7 +308,7 @@ Removes an individual classic automation workflow email. Emails from certain wor
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 
-#### `mailchimp automations get`
+#### `mcapi automations get`
 
 Get a summary of an individual classic automation workflow's settings and content. The `trigger_settings` object returns information for the first email in the workflow.
 
@@ -320,7 +320,7 @@ Get a summary of an individual classic automation workflow's settings and conten
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations get-email`
+#### `mcapi automations get-email`
 
 Get information about an individual classic automation workflow email.
 
@@ -331,7 +331,7 @@ Get information about an individual classic automation workflow email.
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 
-#### `mailchimp automations get-email-queue`
+#### `mcapi automations get-email-queue`
 
 Get information about a specific subscriber in a classic automation email queue.
 
@@ -343,7 +343,7 @@ Get information about a specific subscriber in a classic automation email queue.
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp automations get-removed-subscriber`
+#### `mcapi automations get-removed-subscriber`
 
 Get information about a specific subscriber who was removed from a classic automation workflow.
 
@@ -354,7 +354,7 @@ Get information about a specific subscriber who was removed from a classic autom
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp automations list`
+#### `mcapi automations list`
 
 Get a summary of an account's classic automations.
 
@@ -372,7 +372,7 @@ Get a summary of an account's classic automations.
 | `--since-start-time` | `string (date-time)` | No | Restrict the response to automations started after this time. Uses the ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--status` | `save | paused | sending` | No | Restrict the results to automations with the specified status. |
 
-#### `mailchimp automations list-email-queue`
+#### `mcapi automations list-email-queue`
 
 Get information about a classic automation email queue.
 
@@ -383,7 +383,7 @@ Get information about a classic automation email queue.
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 | `--workflow-email-id` | `string` | Yes | The unique id for the Automation workflow email. |
 
-#### `mailchimp automations list-emails`
+#### `mcapi automations list-emails`
 
 Get a summary of the emails in a classic automation workflow.
 
@@ -393,7 +393,7 @@ Get a summary of the emails in a classic automation workflow.
 |------|------|----------|-------------|
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations list-removed-subscribers`
+#### `mcapi automations list-removed-subscribers`
 
 Get information about subscribers who were removed from a classic automation workflow.
 
@@ -403,7 +403,7 @@ Get information about subscribers who were removed from a classic automation wor
 |------|------|----------|-------------|
 | `--workflow-id` | `string` | Yes | The unique id for the Automation workflow. |
 
-#### `mailchimp automations update-email`
+#### `mcapi automations update-email`
 
 Update settings for a classic automation workflow email.  Only works with workflows of type: abandonedBrowse, abandonedCart, emailFollowup, or singleWelcome.
 
@@ -417,9 +417,9 @@ Update settings for a classic automation workflow email.  Only works with workfl
 
 ---
 
-### `mailchimp batch-webhooks`
+### `mcapi batch-webhooks`
 
-#### `mailchimp batch-webhooks create`
+#### `mcapi batch-webhooks create`
 
 Configure a webhook that will fire whenever any batch request completes processing.  You may only have a maximum of 20 batch webhooks.
 
@@ -429,7 +429,7 @@ Configure a webhook that will fire whenever any batch request completes processi
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp batch-webhooks delete`
+#### `mcapi batch-webhooks delete`
 
 Remove a batch webhook. Webhooks will no longer be sent to the given URL.
 
@@ -439,7 +439,7 @@ Remove a batch webhook. Webhooks will no longer be sent to the given URL.
 |------|------|----------|-------------|
 | `--batch-webhook-id` | `string` | Yes | The unique id for the batch webhook. |
 
-#### `mailchimp batch-webhooks get`
+#### `mcapi batch-webhooks get`
 
 Get information about a specific batch webhook.
 
@@ -451,7 +451,7 @@ Get information about a specific batch webhook.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--batch-webhook-id` | `string` | Yes | The unique id for the batch webhook. |
 
-#### `mailchimp batch-webhooks list`
+#### `mcapi batch-webhooks list`
 
 Get all webhooks that have been configured for batches.
 
@@ -464,7 +464,7 @@ Get all webhooks that have been configured for batches.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp batch-webhooks update`
+#### `mcapi batch-webhooks update`
 
 Update a webhook that will fire whenever any batch request completes processing.
 
@@ -477,9 +477,9 @@ Update a webhook that will fire whenever any batch request completes processing.
 
 ---
 
-### `mailchimp batches`
+### `mcapi batches`
 
-#### `mailchimp batches create`
+#### `mcapi batches create`
 
 Begin processing a batch operations request.
 
@@ -489,7 +489,7 @@ Begin processing a batch operations request.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp batches delete`
+#### `mcapi batches delete`
 
 Stops a batch request from running. Since only one batch request is run at a time, this can be used to cancel a long running request. The results of any completed operations will not be available after this call.
 
@@ -499,7 +499,7 @@ Stops a batch request from running. Since only one batch request is run at a tim
 |------|------|----------|-------------|
 | `--batch-id` | `string` | Yes | The unique id for the batch operation. |
 
-#### `mailchimp batches get`
+#### `mcapi batches get`
 
 Get the status of a batch request.
 
@@ -511,7 +511,7 @@ Get the status of a batch request.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--batch-id` | `string` | Yes | The unique id for the batch operation. |
 
-#### `mailchimp batches list`
+#### `mcapi batches list`
 
 Get a summary of batch requests that have been made.
 
@@ -526,9 +526,9 @@ Get a summary of batch requests that have been made.
 
 ---
 
-### `mailchimp campaign-folders`
+### `mcapi campaign-folders`
 
-#### `mailchimp campaign-folders create`
+#### `mcapi campaign-folders create`
 
 Create a new campaign folder.
 
@@ -538,7 +538,7 @@ Create a new campaign folder.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaign-folders delete`
+#### `mcapi campaign-folders delete`
 
 Delete a specific campaign folder, and mark all the campaigns in the folder as 'unfiled'.
 
@@ -548,7 +548,7 @@ Delete a specific campaign folder, and mark all the campaigns in the folder as '
 |------|------|----------|-------------|
 | `--folder-id` | `string` | Yes | The unique id for the campaign folder. |
 
-#### `mailchimp campaign-folders get`
+#### `mcapi campaign-folders get`
 
 Get information about a specific folder used to organize campaigns.
 
@@ -560,7 +560,7 @@ Get information about a specific folder used to organize campaigns.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--folder-id` | `string` | Yes | The unique id for the campaign folder. |
 
-#### `mailchimp campaign-folders list`
+#### `mcapi campaign-folders list`
 
 Get all folders used to organize campaigns.
 
@@ -573,7 +573,7 @@ Get all folders used to organize campaigns.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp campaign-folders update`
+#### `mcapi campaign-folders update`
 
 Update a specific folder used to organize campaigns.
 
@@ -586,9 +586,9 @@ Update a specific folder used to organize campaigns.
 
 ---
 
-### `mailchimp campaigns`
+### `mcapi campaigns`
 
-#### `mailchimp campaigns create`
+#### `mcapi campaigns create`
 
 Create a new Mailchimp campaign.
 
@@ -598,7 +598,7 @@ Create a new Mailchimp campaign.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns create-action-cancel-send`
+#### `mcapi campaigns create-action-cancel-send`
 
 Cancel a Regular or Plain-Text Campaign after you send, before all of your recipients receive it. This feature is included with Mailchimp Pro.
 
@@ -608,7 +608,7 @@ Cancel a Regular or Plain-Text Campaign after you send, before all of your recip
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-action-create-resend`
+#### `mcapi campaigns create-action-create-resend`
 
 Remove the guesswork for resending a campaign to certain segments. You can use this endpoint as a shortcut to replicate a campaign and resend it to common segments, such as those who didn't open the campaign, or any new subscribers since it was sent.
 
@@ -619,7 +619,7 @@ Remove the guesswork for resending a campaign to certain segments. You can use t
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--json` | `JSON` | No | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns create-action-pause`
+#### `mcapi campaigns create-action-pause`
 
 Pause an RSS-Driven campaign.
 
@@ -629,7 +629,7 @@ Pause an RSS-Driven campaign.
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-action-replicate`
+#### `mcapi campaigns create-action-replicate`
 
 Replicate a campaign in saved or send status.
 
@@ -639,7 +639,7 @@ Replicate a campaign in saved or send status.
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-action-resume`
+#### `mcapi campaigns create-action-resume`
 
 Resume an RSS-Driven campaign.
 
@@ -649,7 +649,7 @@ Resume an RSS-Driven campaign.
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-action-schedule`
+#### `mcapi campaigns create-action-schedule`
 
 Schedule a campaign for delivery. If you're using Multivariate Campaigns to test send times or sending RSS Campaigns, use the send action instead.
 
@@ -660,7 +660,7 @@ Schedule a campaign for delivery. If you're using Multivariate Campaigns to test
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns create-action-send`
+#### `mcapi campaigns create-action-send`
 
 Send a Mailchimp campaign. For RSS Campaigns, the campaign will send according to its schedule. All other campaigns will send immediately.
 
@@ -670,7 +670,7 @@ Send a Mailchimp campaign. For RSS Campaigns, the campaign will send according t
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-action-test`
+#### `mcapi campaigns create-action-test`
 
 Send a test email.
 
@@ -681,7 +681,7 @@ Send a test email.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns create-action-unschedule`
+#### `mcapi campaigns create-action-unschedule`
 
 Unschedule a scheduled campaign that hasn't started sending.
 
@@ -691,7 +691,7 @@ Unschedule a scheduled campaign that hasn't started sending.
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns create-feedback`
+#### `mcapi campaigns create-feedback`
 
 Add feedback on a specific campaign.
 
@@ -702,7 +702,7 @@ Add feedback on a specific campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns delete`
+#### `mcapi campaigns delete`
 
 Remove a campaign from your Mailchimp account.
 
@@ -712,7 +712,7 @@ Remove a campaign from your Mailchimp account.
 |------|------|----------|-------------|
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns delete-feedback`
+#### `mcapi campaigns delete-feedback`
 
 Remove a specific feedback message for a campaign.
 
@@ -723,7 +723,7 @@ Remove a specific feedback message for a campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--feedback-id` | `string` | Yes | The unique id for the feedback message. |
 
-#### `mailchimp campaigns get`
+#### `mcapi campaigns get`
 
 Get information about a specific campaign.
 
@@ -737,7 +737,7 @@ Get information about a specific campaign.
 | `--include-resend-shortcut-eligibility` | `boolean` | No | Return the `resend_shortcut_eligibility` field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. |
 | `--include-resend-shortcut-usage` | `boolean` | No | Return the `resend_shortcut_usage` field in the response.  This includes information about campaigns related by a shortcut. |
 
-#### `mailchimp campaigns get-content`
+#### `mcapi campaigns get-content`
 
 Get the the HTML and plain-text content for a campaign.
 
@@ -749,7 +749,7 @@ Get the the HTML and plain-text content for a campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns get-feedback`
+#### `mcapi campaigns get-feedback`
 
 Get a specific feedback message from a campaign.
 
@@ -762,7 +762,7 @@ Get a specific feedback message from a campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--feedback-id` | `string` | Yes | The unique id for the feedback message. |
 
-#### `mailchimp campaigns list`
+#### `mcapi campaigns list`
 
 Get all campaigns in an account.
 
@@ -788,7 +788,7 @@ Get all campaigns in an account.
 | `--include-resend-shortcut-eligibility` | `boolean` | No | Return the `resend_shortcut_eligibility` field in the response, which tells you if the campaign is eligible for the various Campaign Resend Shortcuts offered. |
 | `--include-resend-shortcut-usage` | `boolean` | No | Return the `resend_shortcut_usage` field in the response.  This includes information about campaigns related by a shortcut. |
 
-#### `mailchimp campaigns list-feedback`
+#### `mcapi campaigns list-feedback`
 
 Get team feedback while you're working together on a Mailchimp campaign.
 
@@ -800,7 +800,7 @@ Get team feedback while you're working together on a Mailchimp campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns list-send-checklist`
+#### `mcapi campaigns list-send-checklist`
 
 Review the send checklist for a campaign, and resolve any issues before sending.
 
@@ -812,7 +812,7 @@ Review the send checklist for a campaign, and resolve any issues before sending.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp campaigns update`
+#### `mcapi campaigns update`
 
 Update some or all of the settings for a specific campaign.
 
@@ -823,7 +823,7 @@ Update some or all of the settings for a specific campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns update-feedback`
+#### `mcapi campaigns update-feedback`
 
 Update a specific feedback message for a campaign.
 
@@ -835,7 +835,7 @@ Update a specific feedback message for a campaign.
 | `--feedback-id` | `string` | Yes | The unique id for the feedback message. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp campaigns upsert-content`
+#### `mcapi campaigns upsert-content`
 
 Set the content for a campaign.
 
@@ -848,9 +848,9 @@ Set the content for a campaign.
 
 ---
 
-### `mailchimp connected-sites`
+### `mcapi connected-sites`
 
-#### `mailchimp connected-sites create`
+#### `mcapi connected-sites create`
 
 Create a new Mailchimp connected site.
 
@@ -860,7 +860,7 @@ Create a new Mailchimp connected site.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp connected-sites create-action-verify-script-installation`
+#### `mcapi connected-sites create-action-verify-script-installation`
 
 Verify that the connected sites script has been installed, either via the script URL or fragment.
 
@@ -870,7 +870,7 @@ Verify that the connected sites script has been installed, either via the script
 |------|------|----------|-------------|
 | `--connected-site-id` | `string` | Yes | The unique identifier for the site. |
 
-#### `mailchimp connected-sites delete`
+#### `mcapi connected-sites delete`
 
 Remove a connected site from your Mailchimp account.
 
@@ -880,7 +880,7 @@ Remove a connected site from your Mailchimp account.
 |------|------|----------|-------------|
 | `--connected-site-id` | `string` | Yes | The unique identifier for the site. |
 
-#### `mailchimp connected-sites get`
+#### `mcapi connected-sites get`
 
 Get information about a specific connected site.
 
@@ -892,7 +892,7 @@ Get information about a specific connected site.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--connected-site-id` | `string` | Yes | The unique identifier for the site. |
 
-#### `mailchimp connected-sites list`
+#### `mcapi connected-sites list`
 
 Get all connected sites in an account.
 
@@ -907,9 +907,9 @@ Get all connected sites in an account.
 
 ---
 
-### `mailchimp conversations`
+### `mcapi conversations`
 
-#### `mailchimp conversations get`
+#### `mcapi conversations get`
 
 Get details about an individual conversation. Conversations has been deprecated in favor of Inbox and these endpoints don't include Inbox data. Past Conversations are still available via this endpoint, but new campaign replies and other Inbox messages aren’t available using this endpoint.
 
@@ -921,7 +921,7 @@ Get details about an individual conversation. Conversations has been deprecated 
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--conversation-id` | `string` | Yes | The unique id for the conversation. |
 
-#### `mailchimp conversations get-message`
+#### `mcapi conversations get-message`
 
 Get an individual message in a conversation. Conversations has been deprecated in favor of Inbox and these endpoints don't include Inbox data. Past Conversations are still available via this endpoint, but new campaign replies and other Inbox messages aren’t available using this endpoint.
 
@@ -934,7 +934,7 @@ Get an individual message in a conversation. Conversations has been deprecated i
 | `--conversation-id` | `string` | Yes | The unique id for the conversation. |
 | `--message-id` | `string` | Yes | The unique id for the conversation message. |
 
-#### `mailchimp conversations list`
+#### `mcapi conversations list`
 
 Get a list of conversations for the account. Conversations has been deprecated in favor of Inbox and these endpoints don't include Inbox data. Past Conversations are still available via this endpoint, but new campaign replies and other Inbox messages aren’t available using this endpoint.
 
@@ -950,7 +950,7 @@ Get a list of conversations for the account. Conversations has been deprecated i
 | `--list-id` | `string` | No | The unique id for the list. |
 | `--campaign-id` | `string` | No | The unique id for the campaign. |
 
-#### `mailchimp conversations list-messages`
+#### `mcapi conversations list-messages`
 
 Get messages from a specific conversation. Conversations has been deprecated in favor of Inbox and these endpoints don't include Inbox data. Past Conversations are still available via this endpoint, but new campaign replies and other Inbox messages aren’t available using this endpoint.
 
@@ -967,9 +967,9 @@ Get messages from a specific conversation. Conversations has been deprecated in 
 
 ---
 
-### `mailchimp customer-journeys`
+### `mcapi customer-journeys`
 
-#### `mailchimp customer-journeys create-journey-step-action-trigger`
+#### `mcapi customer-journeys create-journey-step-action-trigger`
 
 A step trigger in an Automation flow. To use it, create a starting point or step from the Automation flow builder in the app using the Customer Journeys API condition. We’ll provide a url during the process that includes the {journey_id} and {step_id}. You’ll then be able to use this endpoint to trigger the condition for the posted contact.
 
@@ -983,9 +983,9 @@ A step trigger in an Automation flow. To use it, create a starting point or step
 
 ---
 
-### `mailchimp ecommerce`
+### `mcapi ecommerce`
 
-#### `mailchimp ecommerce create-store`
+#### `mcapi ecommerce create-store`
 
 Add a new store to your Mailchimp account.
 
@@ -995,7 +995,7 @@ Add a new store to your Mailchimp account.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-cart`
+#### `mcapi ecommerce create-store-cart`
 
 Add a new cart to a store.
 
@@ -1006,7 +1006,7 @@ Add a new cart to a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-cart-line`
+#### `mcapi ecommerce create-store-cart-line`
 
 Add a new line item to an existing cart.
 
@@ -1018,7 +1018,7 @@ Add a new line item to an existing cart.
 | `--cart-id` | `string` | Yes | The id for the cart. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-customer`
+#### `mcapi ecommerce create-store-customer`
 
 Add a new customer to a store.
 
@@ -1029,7 +1029,7 @@ Add a new customer to a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-order`
+#### `mcapi ecommerce create-store-order`
 
 Add a new order to a store.
 
@@ -1040,7 +1040,7 @@ Add a new order to a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-order-line`
+#### `mcapi ecommerce create-store-order-line`
 
 Add a new line item to an existing order.
 
@@ -1052,7 +1052,7 @@ Add a new line item to an existing order.
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-product`
+#### `mcapi ecommerce create-store-product`
 
 Add a new product to a store.
 
@@ -1063,7 +1063,7 @@ Add a new product to a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-product-image`
+#### `mcapi ecommerce create-store-product-image`
 
 Add a new image to the product.
 
@@ -1075,7 +1075,7 @@ Add a new image to the product.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-product-variant`
+#### `mcapi ecommerce create-store-product-variant`
 
 Add a new variant to the product.
 
@@ -1087,7 +1087,7 @@ Add a new variant to the product.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-promo-rule`
+#### `mcapi ecommerce create-store-promo-rule`
 
 Add a new promo rule to a store.
 
@@ -1098,7 +1098,7 @@ Add a new promo rule to a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce create-store-promo-rule-promo-code`
+#### `mcapi ecommerce create-store-promo-rule-promo-code`
 
 Add a new promo code to a store.
 
@@ -1110,7 +1110,7 @@ Add a new promo code to a store.
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce delete-store`
+#### `mcapi ecommerce delete-store`
 
 Delete a store. Deleting a store will also delete any associated subresources, including Customers, Orders, Products, and Carts.
 
@@ -1120,7 +1120,7 @@ Delete a store. Deleting a store will also delete any associated subresources, i
 |------|------|----------|-------------|
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce delete-store-cart`
+#### `mcapi ecommerce delete-store-cart`
 
 Delete a cart.
 
@@ -1131,7 +1131,7 @@ Delete a cart.
 | `--store-id` | `string` | Yes | The store id. |
 | `--cart-id` | `string` | Yes | The id for the cart. |
 
-#### `mailchimp ecommerce delete-store-cart-line`
+#### `mcapi ecommerce delete-store-cart-line`
 
 Delete a specific cart line item.
 
@@ -1143,7 +1143,7 @@ Delete a specific cart line item.
 | `--cart-id` | `string` | Yes | The id for the cart. |
 | `--line-id` | `string` | Yes | The id for the line item of a cart. |
 
-#### `mailchimp ecommerce delete-store-customer`
+#### `mcapi ecommerce delete-store-customer`
 
 Delete a customer from a store.
 
@@ -1154,7 +1154,7 @@ Delete a customer from a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--customer-id` | `string` | Yes | The id for the customer of a store. |
 
-#### `mailchimp ecommerce delete-store-order`
+#### `mcapi ecommerce delete-store-order`
 
 Delete an order.
 
@@ -1165,7 +1165,7 @@ Delete an order.
 | `--store-id` | `string` | Yes | The store id. |
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 
-#### `mailchimp ecommerce delete-store-order-line`
+#### `mcapi ecommerce delete-store-order-line`
 
 Delete a specific order line item.
 
@@ -1177,7 +1177,7 @@ Delete a specific order line item.
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 | `--line-id` | `string` | Yes | The id for the line item of an order. |
 
-#### `mailchimp ecommerce delete-store-product`
+#### `mcapi ecommerce delete-store-product`
 
 Delete a product.
 
@@ -1188,7 +1188,7 @@ Delete a product.
 | `--store-id` | `string` | Yes | The store id. |
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 
-#### `mailchimp ecommerce delete-store-product-image`
+#### `mcapi ecommerce delete-store-product-image`
 
 Delete a product image.
 
@@ -1200,7 +1200,7 @@ Delete a product image.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--image-id` | `string` | Yes | The id for the product image. |
 
-#### `mailchimp ecommerce delete-store-product-variant`
+#### `mcapi ecommerce delete-store-product-variant`
 
 Delete a product variant.
 
@@ -1212,7 +1212,7 @@ Delete a product variant.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--variant-id` | `string` | Yes | The id for the product variant. |
 
-#### `mailchimp ecommerce delete-store-promo-rule`
+#### `mcapi ecommerce delete-store-promo-rule`
 
 Delete a promo rule from a store.
 
@@ -1223,7 +1223,7 @@ Delete a promo rule from a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 
-#### `mailchimp ecommerce delete-store-promo-rule-promo-code`
+#### `mcapi ecommerce delete-store-promo-rule-promo-code`
 
 Delete a promo code from a store.
 
@@ -1235,7 +1235,7 @@ Delete a promo code from a store.
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 | `--promo-code-id` | `string` | Yes | The id for the promo code of a store. |
 
-#### `mailchimp ecommerce get-store`
+#### `mcapi ecommerce get-store`
 
 Get information about a specific store.
 
@@ -1247,7 +1247,7 @@ Get information about a specific store.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce get-store-cart`
+#### `mcapi ecommerce get-store-cart`
 
 Get information about a specific cart.
 
@@ -1260,7 +1260,7 @@ Get information about a specific cart.
 | `--store-id` | `string` | Yes | The store id. |
 | `--cart-id` | `string` | Yes | The id for the cart. |
 
-#### `mailchimp ecommerce get-store-cart-line`
+#### `mcapi ecommerce get-store-cart-line`
 
 Get information about a specific cart line item.
 
@@ -1274,7 +1274,7 @@ Get information about a specific cart line item.
 | `--cart-id` | `string` | Yes | The id for the cart. |
 | `--line-id` | `string` | Yes | The id for the line item of a cart. |
 
-#### `mailchimp ecommerce get-store-customer`
+#### `mcapi ecommerce get-store-customer`
 
 Get information about a specific customer.
 
@@ -1287,7 +1287,7 @@ Get information about a specific customer.
 | `--store-id` | `string` | Yes | The store id. |
 | `--customer-id` | `string` | Yes | The id for the customer of a store. |
 
-#### `mailchimp ecommerce get-store-order`
+#### `mcapi ecommerce get-store-order`
 
 Get information about a specific order.
 
@@ -1300,7 +1300,7 @@ Get information about a specific order.
 | `--store-id` | `string` | Yes | The store id. |
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 
-#### `mailchimp ecommerce get-store-order-line`
+#### `mcapi ecommerce get-store-order-line`
 
 Get information about a specific order line item.
 
@@ -1314,7 +1314,7 @@ Get information about a specific order line item.
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 | `--line-id` | `string` | Yes | The id for the line item of an order. |
 
-#### `mailchimp ecommerce get-store-product`
+#### `mcapi ecommerce get-store-product`
 
 Get information about a specific product.
 
@@ -1327,7 +1327,7 @@ Get information about a specific product.
 | `--store-id` | `string` | Yes | The store id. |
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 
-#### `mailchimp ecommerce get-store-product-image`
+#### `mcapi ecommerce get-store-product-image`
 
 Get information about a specific product image.
 
@@ -1341,7 +1341,7 @@ Get information about a specific product image.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--image-id` | `string` | Yes | The id for the product image. |
 
-#### `mailchimp ecommerce get-store-product-variant`
+#### `mcapi ecommerce get-store-product-variant`
 
 Get information about a specific product variant.
 
@@ -1355,7 +1355,7 @@ Get information about a specific product variant.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--variant-id` | `string` | Yes | The id for the product variant. |
 
-#### `mailchimp ecommerce get-store-promo-rule`
+#### `mcapi ecommerce get-store-promo-rule`
 
 Get information about a specific promo rule.
 
@@ -1368,7 +1368,7 @@ Get information about a specific promo rule.
 | `--store-id` | `string` | Yes | The store id. |
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 
-#### `mailchimp ecommerce get-store-promo-rule-promo-code`
+#### `mcapi ecommerce get-store-promo-rule-promo-code`
 
 Get information about a specific promo code.
 
@@ -1382,13 +1382,13 @@ Get information about a specific promo code.
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 | `--promo-code-id` | `string` | Yes | The id for the promo code of a store. |
 
-#### `mailchimp ecommerce list`
+#### `mcapi ecommerce list`
 
 Get information about the e-commerce endpoint's resources.
 
 `GET /3.0/ecommerce`
 
-#### `mailchimp ecommerce list-orders`
+#### `mcapi ecommerce list-orders`
 
 Get information about an account's orders.
 
@@ -1405,7 +1405,7 @@ Get information about an account's orders.
 | `--customer-id` | `string` | No | Restrict results to orders made by a specific customer. |
 | `--has-outreach` | `boolean` | No | Restrict results to orders that have an outreach attached. For example, an email campaign or Facebook ad. |
 
-#### `mailchimp ecommerce list-store-cart-lines`
+#### `mcapi ecommerce list-store-cart-lines`
 
 Get information about a cart's line items.
 
@@ -1420,7 +1420,7 @@ Get information about a cart's line items.
 | `--store-id` | `string` | Yes | The store id. |
 | `--cart-id` | `string` | Yes | The id for the cart. |
 
-#### `mailchimp ecommerce list-store-carts`
+#### `mcapi ecommerce list-store-carts`
 
 Get information about a store's carts.
 
@@ -1434,7 +1434,7 @@ Get information about a store's carts.
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce list-store-customers`
+#### `mcapi ecommerce list-store-customers`
 
 Get information about a store's customers.
 
@@ -1449,7 +1449,7 @@ Get information about a store's customers.
 | `--store-id` | `string` | Yes | The store id. |
 | `--email-address` | `string` | No | Restrict the response to customers with the email address. |
 
-#### `mailchimp ecommerce list-store-order-lines`
+#### `mcapi ecommerce list-store-order-lines`
 
 Get information about an order's line items.
 
@@ -1464,7 +1464,7 @@ Get information about an order's line items.
 | `--store-id` | `string` | Yes | The store id. |
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 
-#### `mailchimp ecommerce list-store-orders`
+#### `mcapi ecommerce list-store-orders`
 
 Get information about a store's orders.
 
@@ -1482,7 +1482,7 @@ Get information about a store's orders.
 | `--campaign-id` | `string` | No | Restrict results to orders with a specific `campaign_id` value. |
 | `--outreach-id` | `string` | No | Restrict results to orders with a specific `outreach_id` value. |
 
-#### `mailchimp ecommerce list-store-product-images`
+#### `mcapi ecommerce list-store-product-images`
 
 Get information about a product's images.
 
@@ -1497,7 +1497,7 @@ Get information about a product's images.
 | `--store-id` | `string` | Yes | The store id. |
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 
-#### `mailchimp ecommerce list-store-product-variants`
+#### `mcapi ecommerce list-store-product-variants`
 
 Get information about a product's variants.
 
@@ -1512,7 +1512,7 @@ Get information about a product's variants.
 | `--store-id` | `string` | Yes | The store id. |
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 
-#### `mailchimp ecommerce list-store-products`
+#### `mcapi ecommerce list-store-products`
 
 Get information about a store's products.
 
@@ -1526,7 +1526,7 @@ Get information about a store's products.
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce list-store-promo-rule-promo-codes`
+#### `mcapi ecommerce list-store-promo-rule-promo-codes`
 
 Get information about a store's promo codes.
 
@@ -1541,7 +1541,7 @@ Get information about a store's promo codes.
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce list-store-promo-rules`
+#### `mcapi ecommerce list-store-promo-rules`
 
 Get information about a store's promo rules.
 
@@ -1555,7 +1555,7 @@ Get information about a store's promo rules.
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--store-id` | `string` | Yes | The store id. |
 
-#### `mailchimp ecommerce list-stores`
+#### `mcapi ecommerce list-stores`
 
 Get information about all stores in the account.
 
@@ -1568,7 +1568,7 @@ Get information about all stores in the account.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp ecommerce update-store`
+#### `mcapi ecommerce update-store`
 
 Update a store.
 
@@ -1579,7 +1579,7 @@ Update a store.
 | `--store-id` | `string` | Yes | The store id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-cart`
+#### `mcapi ecommerce update-store-cart`
 
 Update a specific cart.
 
@@ -1591,7 +1591,7 @@ Update a specific cart.
 | `--cart-id` | `string` | Yes | The id for the cart. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-cart-line`
+#### `mcapi ecommerce update-store-cart-line`
 
 Update a specific cart line item.
 
@@ -1604,7 +1604,7 @@ Update a specific cart line item.
 | `--line-id` | `string` | Yes | The id for the line item of a cart. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-customer`
+#### `mcapi ecommerce update-store-customer`
 
 Update a customer.
 
@@ -1616,7 +1616,7 @@ Update a customer.
 | `--customer-id` | `string` | Yes | The id for the customer of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-order`
+#### `mcapi ecommerce update-store-order`
 
 Update a specific order.
 
@@ -1628,7 +1628,7 @@ Update a specific order.
 | `--order-id` | `string` | Yes | The id for the order in a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-order-line`
+#### `mcapi ecommerce update-store-order-line`
 
 Update a specific order line item.
 
@@ -1641,7 +1641,7 @@ Update a specific order line item.
 | `--line-id` | `string` | Yes | The id for the line item of an order. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-product`
+#### `mcapi ecommerce update-store-product`
 
 Update a specific product.
 
@@ -1653,7 +1653,7 @@ Update a specific product.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-product-image`
+#### `mcapi ecommerce update-store-product-image`
 
 Update a product image.
 
@@ -1666,7 +1666,7 @@ Update a product image.
 | `--image-id` | `string` | Yes | The id for the product image. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-product-variant`
+#### `mcapi ecommerce update-store-product-variant`
 
 Update a product variant.
 
@@ -1679,7 +1679,7 @@ Update a product variant.
 | `--variant-id` | `string` | Yes | The id for the product variant. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-promo-rule`
+#### `mcapi ecommerce update-store-promo-rule`
 
 Update a promo rule.
 
@@ -1691,7 +1691,7 @@ Update a promo rule.
 | `--promo-rule-id` | `string` | Yes | The id for the promo rule of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce update-store-promo-rule-promo-code`
+#### `mcapi ecommerce update-store-promo-rule-promo-code`
 
 Update a promo code.
 
@@ -1704,7 +1704,7 @@ Update a promo code.
 | `--promo-code-id` | `string` | Yes | The id for the promo code of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce upsert-store-customer`
+#### `mcapi ecommerce upsert-store-customer`
 
 Add or update a customer.
 
@@ -1716,7 +1716,7 @@ Add or update a customer.
 | `--customer-id` | `string` | Yes | The id for the customer of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce upsert-store-product`
+#### `mcapi ecommerce upsert-store-product`
 
 Update a specific product.
 
@@ -1728,7 +1728,7 @@ Update a specific product.
 | `--product-id` | `string` | Yes | The id for the product of a store. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp ecommerce upsert-store-product-variant`
+#### `mcapi ecommerce upsert-store-product-variant`
 
 Add or update a product variant.
 
@@ -1743,9 +1743,9 @@ Add or update a product variant.
 
 ---
 
-### `mailchimp facebook-ads`
+### `mcapi facebook-ads`
 
-#### `mailchimp facebook-ads get`
+#### `mcapi facebook-ads get`
 
 Get details of a Facebook ad.
 
@@ -1757,7 +1757,7 @@ Get details of a Facebook ad.
 | `--outreach-id` | `string` | Yes | The outreach id. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp facebook-ads list`
+#### `mcapi facebook-ads list`
 
 Get list of Facebook ads.
 
@@ -1774,9 +1774,9 @@ Get list of Facebook ads.
 
 ---
 
-### `mailchimp file-manager`
+### `mcapi file-manager`
 
-#### `mailchimp file-manager create-file`
+#### `mcapi file-manager create-file`
 
 Upload a new image or file to the File Manager.
 
@@ -1786,7 +1786,7 @@ Upload a new image or file to the File Manager.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp file-manager create-folder`
+#### `mcapi file-manager create-folder`
 
 Create a new folder in the File Manager.
 
@@ -1796,7 +1796,7 @@ Create a new folder in the File Manager.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp file-manager delete-file`
+#### `mcapi file-manager delete-file`
 
 Remove a specific file from the File Manager.
 
@@ -1806,7 +1806,7 @@ Remove a specific file from the File Manager.
 |------|------|----------|-------------|
 | `--file-id` | `string` | Yes | The unique id for the File Manager file. |
 
-#### `mailchimp file-manager delete-folder`
+#### `mcapi file-manager delete-folder`
 
 Delete a specific folder in the File Manager.
 
@@ -1816,7 +1816,7 @@ Delete a specific folder in the File Manager.
 |------|------|----------|-------------|
 | `--folder-id` | `string` | Yes | The unique id for the File Manager folder. |
 
-#### `mailchimp file-manager get-file`
+#### `mcapi file-manager get-file`
 
 Get information about a specific file in the File Manager.
 
@@ -1828,7 +1828,7 @@ Get information about a specific file in the File Manager.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--file-id` | `string` | Yes | The unique id for the File Manager file. |
 
-#### `mailchimp file-manager get-folder`
+#### `mcapi file-manager get-folder`
 
 Get information about a specific folder in the File Manager.
 
@@ -1840,13 +1840,13 @@ Get information about a specific folder in the File Manager.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--folder-id` | `string` | Yes | The unique id for the File Manager folder. |
 
-#### `mailchimp file-manager list`
+#### `mcapi file-manager list`
 
 Get information about the file-manager endpoint's resources
 
 `GET /3.0/file-manager`
 
-#### `mailchimp file-manager list-files`
+#### `mcapi file-manager list-files`
 
 Get a list of available images and files stored in the File Manager for the account.
 
@@ -1865,7 +1865,7 @@ Get a list of available images and files stored in the File Manager for the acco
 | `--sort-field` | `added_date | name | size` | No | Returns files sorted by the specified field. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp file-manager list-folder-files`
+#### `mcapi file-manager list-folder-files`
 
 Get a list of available images and files stored in this folder.
 
@@ -1885,7 +1885,7 @@ Get a list of available images and files stored in this folder.
 | `--sort-field` | `added_date | name | size` | No | Returns files sorted by the specified field. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp file-manager list-folders`
+#### `mcapi file-manager list-folders`
 
 Get a list of all folders in the File Manager.
 
@@ -1901,7 +1901,7 @@ Get a list of all folders in the File Manager.
 | `--before-created-at` | `string` | No | Restrict the response to files created before the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--since-created-at` | `string` | No | Restrict the response to files created after the set date. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 
-#### `mailchimp file-manager update-file`
+#### `mcapi file-manager update-file`
 
 Update a file in the File Manager.
 
@@ -1912,7 +1912,7 @@ Update a file in the File Manager.
 | `--file-id` | `string` | Yes | The unique id for the File Manager file. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp file-manager update-folder`
+#### `mcapi file-manager update-folder`
 
 Update a specific File Manager folder.
 
@@ -1925,9 +1925,9 @@ Update a specific File Manager folder.
 
 ---
 
-### `mailchimp landing-pages`
+### `mcapi landing-pages`
 
-#### `mailchimp landing-pages create`
+#### `mcapi landing-pages create`
 
 Create an unpublished and contentless Mailchimp landing page.
 
@@ -1938,7 +1938,7 @@ Create an unpublished and contentless Mailchimp landing page.
 | `--use-default-list` | `boolean` | No | Will create the Landing Page using the account's Default List instead of requiring a list_id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp landing-pages create-action-publish`
+#### `mcapi landing-pages create-action-publish`
 
 Publish a landing page that is in draft, unpublished, or has been previously published and edited.
 
@@ -1948,7 +1948,7 @@ Publish a landing page that is in draft, unpublished, or has been previously pub
 |------|------|----------|-------------|
 | `--page-id` | `string` | Yes | The unique id for the page. |
 
-#### `mailchimp landing-pages create-action-unpublish`
+#### `mcapi landing-pages create-action-unpublish`
 
 Unpublish a landing page that is in draft or has been published.
 
@@ -1958,7 +1958,7 @@ Unpublish a landing page that is in draft or has been published.
 |------|------|----------|-------------|
 | `--page-id` | `string` | Yes | The unique id for the page. |
 
-#### `mailchimp landing-pages delete`
+#### `mcapi landing-pages delete`
 
 Delete a landing page.
 
@@ -1968,7 +1968,7 @@ Delete a landing page.
 |------|------|----------|-------------|
 | `--page-id` | `string` | Yes | The unique id for the page. |
 
-#### `mailchimp landing-pages get`
+#### `mcapi landing-pages get`
 
 Get information about a specific page.
 
@@ -1980,7 +1980,7 @@ Get information about a specific page.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--page-id` | `string` | Yes | The unique id for the page. |
 
-#### `mailchimp landing-pages list`
+#### `mcapi landing-pages list`
 
 Get all landing pages.
 
@@ -1994,7 +1994,7 @@ Get all landing pages.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 
-#### `mailchimp landing-pages list-content`
+#### `mcapi landing-pages list-content`
 
 Get the the HTML for your landing page.
 
@@ -2006,7 +2006,7 @@ Get the the HTML for your landing page.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--page-id` | `string` | Yes | The unique id for the page. |
 
-#### `mailchimp landing-pages update`
+#### `mcapi landing-pages update`
 
 Update a landing page.
 
@@ -2019,9 +2019,9 @@ Update a landing page.
 
 ---
 
-### `mailchimp lists`
+### `mcapi lists`
 
-#### `mailchimp lists batch-add-or-remove-members`
+#### `mcapi lists batch-add-or-remove-members`
 
 Batch add/remove list members to static segment
 
@@ -2033,7 +2033,7 @@ Batch add/remove list members to static segment
 | `--segment-id` | `string` | Yes | The unique id for the segment. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists batch-subscribe-or-unsubscribe`
+#### `mcapi lists batch-subscribe-or-unsubscribe`
 
 Batch subscribe or unsubscribe list members.
 
@@ -2046,7 +2046,7 @@ Batch subscribe or unsubscribe list members.
 | `--skip-duplicate-check` | `boolean` | No | If skip_duplicate_check is true, we will ignore duplicates sent in the request when using the batch sub/unsub on the lists endpoint. The status of the first appearance in the request will be saved. This defaults to false. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create`
+#### `mcapi lists create`
 
 Create a new list in your Mailchimp account.
 
@@ -2056,7 +2056,7 @@ Create a new list in your Mailchimp account.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-interest-category`
+#### `mcapi lists create-interest-category`
 
 Create a new interest category.
 
@@ -2067,7 +2067,7 @@ Create a new interest category.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-interest-category-interest`
+#### `mcapi lists create-interest-category-interest`
 
 Create a new interest or 'group name' for a specific category.
 
@@ -2079,7 +2079,7 @@ Create a new interest or 'group name' for a specific category.
 | `--interest-category-id` | `string` | Yes | The unique ID for the interest category. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-list-survey-action-replicate`
+#### `mcapi lists create-list-survey-action-replicate`
 
 Replicate a survey.
 
@@ -2091,7 +2091,7 @@ Replicate a survey.
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 | `--json` | `JSON` | No | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-member`
+#### `mcapi lists create-member`
 
 Add a new member to the list.
 
@@ -2103,7 +2103,7 @@ Add a new member to the list.
 | `--skip-merge-validation` | `boolean` | No | If skip_merge_validation is true, member data will be accepted without merge field values, even if the merge field is usually required. This defaults to false. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-member-action-delete-permanent`
+#### `mcapi lists create-member-action-delete-permanent`
 
 Delete all personally identifiable information related to a list member, and remove them from a list. This will make it impossible to re-import the list member.
 
@@ -2114,7 +2114,7 @@ Delete all personally identifiable information related to a list member, and rem
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp lists create-member-event`
+#### `mcapi lists create-member-event`
 
 Add an event for a list member.
 
@@ -2126,7 +2126,7 @@ Add an event for a list member.
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. This endpoint also accepts a list member's email address or contact_id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-member-note`
+#### `mcapi lists create-member-note`
 
 Add a new note for a specific subscriber.
 
@@ -2138,7 +2138,7 @@ Add a new note for a specific subscriber.
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-member-tag`
+#### `mcapi lists create-member-tag`
 
 Add or remove tags from a list member. If a tag that does not exist is passed in and set as 'active', a new tag will be created.
 
@@ -2150,7 +2150,7 @@ Add or remove tags from a list member. If a tag that does not exist is passed in
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-merge-field`
+#### `mcapi lists create-merge-field`
 
 Add a new merge field for a specific audience.
 
@@ -2161,7 +2161,7 @@ Add a new merge field for a specific audience.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-segment`
+#### `mcapi lists create-segment`
 
 Create a new segment in a specific list.
 
@@ -2172,7 +2172,7 @@ Create a new segment in a specific list.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-segment-member`
+#### `mcapi lists create-segment-member`
 
 Add a member to a static segment.
 
@@ -2184,7 +2184,7 @@ Add a member to a static segment.
 | `--segment-id` | `string` | Yes | The unique id for the segment. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-signup-form`
+#### `mcapi lists create-signup-form`
 
 Customize a list's default signup form.
 
@@ -2195,7 +2195,7 @@ Customize a list's default signup form.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-survey`
+#### `mcapi lists create-survey`
 
 Create a draft survey for an audience.
 
@@ -2206,7 +2206,7 @@ Create a draft survey for an audience.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists create-webhook`
+#### `mcapi lists create-webhook`
 
 Create a new webhook for a specific list.
 
@@ -2217,7 +2217,7 @@ Create a new webhook for a specific list.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists delete`
+#### `mcapi lists delete`
 
 Delete a list from your Mailchimp account. If you delete a list, you'll lose the list history—including subscriber activity, unsubscribes, complaints, and bounces. You’ll also lose subscribers’ email addresses, unless you exported and backed up your list.
 
@@ -2227,7 +2227,7 @@ Delete a list from your Mailchimp account. If you delete a list, you'll lose the
 |------|------|----------|-------------|
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists delete-interest-category`
+#### `mcapi lists delete-interest-category`
 
 Delete a specific interest category.
 
@@ -2238,7 +2238,7 @@ Delete a specific interest category.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--interest-category-id` | `string` | Yes | The unique ID for the interest category. |
 
-#### `mailchimp lists delete-interest-category-interest`
+#### `mcapi lists delete-interest-category-interest`
 
 Delete interests or group names in a specific category.
 
@@ -2250,7 +2250,7 @@ Delete interests or group names in a specific category.
 | `--interest-category-id` | `string` | Yes | The unique ID for the interest category. |
 | `--interest-id` | `string` | Yes | The specific interest or 'group name'. |
 
-#### `mailchimp lists delete-member`
+#### `mcapi lists delete-member`
 
 Archive a list member. To permanently delete, use the delete-permanent action.
 
@@ -2261,7 +2261,7 @@ Archive a list member. To permanently delete, use the delete-permanent action.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. This endpoint also accepts a list member's email address or contact_id. |
 
-#### `mailchimp lists delete-member-note`
+#### `mcapi lists delete-member-note`
 
 Delete a specific note for a specific list member.
 
@@ -2273,7 +2273,7 @@ Delete a specific note for a specific list member.
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. This endpoint also accepts a list member's email address or contact_id. |
 | `--note-id` | `string` | Yes | The id for the note. |
 
-#### `mailchimp lists delete-merge-field`
+#### `mcapi lists delete-merge-field`
 
 Delete a specific merge field.
 
@@ -2284,7 +2284,7 @@ Delete a specific merge field.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--merge-id` | `string` | Yes | The id for the merge field. |
 
-#### `mailchimp lists delete-segment`
+#### `mcapi lists delete-segment`
 
 Delete a specific segment in a list.
 
@@ -2295,7 +2295,7 @@ Delete a specific segment in a list.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--segment-id` | `string` | Yes | The unique id for the segment. |
 
-#### `mailchimp lists delete-segment-member`
+#### `mcapi lists delete-segment-member`
 
 Remove a member from the specified static segment.
 
@@ -2307,7 +2307,7 @@ Remove a member from the specified static segment.
 | `--segment-id` | `string` | Yes | The unique id for the segment. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp lists delete-survey`
+#### `mcapi lists delete-survey`
 
 Delete a survey.
 
@@ -2318,7 +2318,7 @@ Delete a survey.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp lists delete-webhook`
+#### `mcapi lists delete-webhook`
 
 Delete a specific webhook in a list.
 
@@ -2329,7 +2329,7 @@ Delete a specific webhook in a list.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--webhook-id` | `string` | Yes | The webhook's id. |
 
-#### `mailchimp lists get`
+#### `mcapi lists get`
 
 Get information about a specific list in your Mailchimp account. Results include list members who have signed up but haven't confirmed their subscription yet and unsubscribed or cleaned.
 
@@ -2342,7 +2342,7 @@ Get information about a specific list in your Mailchimp account. Results include
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--include-total-contacts` | `boolean` | No | Deprecated. Return the total_contacts field in the stats response, which contains an approximate count of subscribed, unsubscribed, and transactional contacts. For a complete audience contact count, use the /audiences endpoint instead. |
 
-#### `mailchimp lists get-abuse-report`
+#### `mcapi lists get-abuse-report`
 
 Get details about a specific abuse report.
 
@@ -2357,7 +2357,7 @@ Get details about a specific abuse report.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--report-id` | `string` | Yes | The id for the abuse report. |
 
-#### `mailchimp lists get-growth-history`
+#### `mcapi lists get-growth-history`
 
 Get a summary of a specific list's growth activity for a specific month and year.
 
@@ -2370,7 +2370,7 @@ Get a summary of a specific list's growth activity for a specific month and year
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--month` | `string` | Yes | A specific month of list growth history. |
 
-#### `mailchimp lists get-interest-category`
+#### `mcapi lists get-interest-category`
 
 Get information about a specific interest category.
 
@@ -2383,7 +2383,7 @@ Get information about a specific interest category.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists get-interest-category-interest`
+#### `mcapi lists get-interest-category-interest`
 
 Get interests or 'group names' for a specific category.
 
@@ -2397,7 +2397,7 @@ Get interests or 'group names' for a specific category.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists get-member`
+#### `mcapi lists get-member`
 
 Get information about a specific list member, including a currently subscribed, unsubscribed, or bounced member.
 
@@ -2410,7 +2410,7 @@ Get information about a specific list member, including a currently subscribed, 
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. This endpoint also accepts a list member's email address or contact_id. |
 
-#### `mailchimp lists get-member-note`
+#### `mcapi lists get-member-note`
 
 Get a specific note for a specific list member.
 
@@ -2424,7 +2424,7 @@ Get a specific note for a specific list member.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists get-merge-field`
+#### `mcapi lists get-merge-field`
 
 Get information about a specific merge field.
 
@@ -2437,7 +2437,7 @@ Get information about a specific merge field.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists get-segment`
+#### `mcapi lists get-segment`
 
 Get information about a specific segment.
 
@@ -2453,7 +2453,7 @@ Get information about a specific segment.
 | `--include-transactional` | `boolean` | No | Include transactional members in response |
 | `--include-unsubscribed` | `boolean` | No | Include unsubscribed members in response |
 
-#### `mailchimp lists get-survey`
+#### `mcapi lists get-survey`
 
 Get details about a specific survey.
 
@@ -2464,7 +2464,7 @@ Get details about a specific survey.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp lists get-webhook`
+#### `mcapi lists get-webhook`
 
 Get information about a specific webhook.
 
@@ -2475,7 +2475,7 @@ Get information about a specific webhook.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--webhook-id` | `string` | Yes | The webhook's id. |
 
-#### `mailchimp lists list`
+#### `mcapi lists list`
 
 Get information about all lists in the account.
 
@@ -2497,7 +2497,7 @@ Get information about all lists in the account.
 | `--has-ecommerce-store` | `boolean` | No | Restrict results to lists that contain an active, connected, undeleted ecommerce store. |
 | `--include-total-contacts` | `boolean` | No | Deprecated. Return the total_contacts field in the stats response, which contains an approximate count of subscribed, unsubscribed, and transactional contacts. For a complete audience contact count, use the /audiences endpoint instead. |
 
-#### `mailchimp lists list-abuse-reports`
+#### `mcapi lists list-abuse-reports`
 
 Get all abuse reports for a specific list.
 
@@ -2511,7 +2511,7 @@ Get all abuse reports for a specific list.
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-activity`
+#### `mcapi lists list-activity`
 
 Get up to the previous 180 days of daily detailed aggregated activity stats for a list, not including Automation activity.
 
@@ -2525,7 +2525,7 @@ Get up to the previous 180 days of daily detailed aggregated activity stats for 
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-clients`
+#### `mcapi lists list-clients`
 
 Get a list of the top email clients based on user-agent strings.
 
@@ -2537,7 +2537,7 @@ Get a list of the top email clients based on user-agent strings.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-growth-history`
+#### `mcapi lists list-growth-history`
 
 Get a month-by-month summary of a specific list's growth activity.
 
@@ -2553,7 +2553,7 @@ Get a month-by-month summary of a specific list's growth activity.
 | `--sort-field` | `month` | No | Returns files sorted by the specified field. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp lists list-interest-categories`
+#### `mcapi lists list-interest-categories`
 
 Get information about a list's interest categories.
 
@@ -2570,7 +2570,7 @@ Get information about a list's interest categories.
 | `--sort-field` | `name | display_order` | No | Returns interest categories sorted by the specified field. Defaults to display_order. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp lists list-interest-category-interests`
+#### `mcapi lists list-interest-category-interests`
 
 Get a list of this category's interests.
 
@@ -2585,7 +2585,7 @@ Get a list of this category's interests.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp lists list-locations`
+#### `mcapi lists list-locations`
 
 Get the locations (countries) that the list's subscribers have been tagged to based on geocoding their IP address.
 
@@ -2597,7 +2597,7 @@ Get the locations (countries) that the list's subscribers have been tagged to ba
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-member-activity`
+#### `mcapi lists list-member-activity`
 
 Get the last 50 events of a member's activity on a specific list, including opens, clicks, and unsubscribes.
 
@@ -2611,7 +2611,7 @@ Get the last 50 events of a member's activity on a specific list, including open
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--action` | `abuse | bounce | click | open | sent | unsub | ecomm[]` | No | A comma seperated list of actions to return. |
 
-#### `mailchimp lists list-member-activity-feed`
+#### `mcapi lists list-member-activity-feed`
 
 Get a member's activity on a specific list, including opens, clicks, and unsubscribes.
 
@@ -2627,7 +2627,7 @@ Get a member's activity on a specific list, including opens, clicks, and unsubsc
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--activity-filters` | `bounce | click | conversation | ecommerce_signup | event | web_engagement | generic_signup | landing_page_signup | marketing_permission | note | open | order | postcard_sent | sent | signup | squatter_signup | unsub | website_signup | survey_response | sms_bulk_sent | inbox_thread | qbo_payment_link | video_call_transcripts | whatsapp_bulk_sent | whatsapp_delivered[]` | No | A comma-separated list of activity filters that correspond to a set of activity types, e.g "?activity_filters=open,bounce,click". |
 
-#### `mailchimp lists list-member-events`
+#### `mcapi lists list-member-events`
 
 Get events for a contact.
 
@@ -2642,7 +2642,7 @@ Get events for a contact.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists list-member-goals`
+#### `mcapi lists list-member-goals`
 
 Get the last 50 Goal events for a member on a specific list.
 
@@ -2655,7 +2655,7 @@ Get the last 50 Goal events for a member on a specific list.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp lists list-member-notes`
+#### `mcapi lists list-member-notes`
 
 Get recent notes for a specific list member.
 
@@ -2672,7 +2672,7 @@ Get recent notes for a specific list member.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp lists list-member-tags`
+#### `mcapi lists list-member-tags`
 
 Get the tags on a list member.
 
@@ -2687,7 +2687,7 @@ Get the tags on a list member.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp lists list-members`
+#### `mcapi lists list-members`
 
 Get information about members in a specific Mailchimp list.
 
@@ -2716,7 +2716,7 @@ Get information about members in a specific Mailchimp list.
 | `--since-last-campaign` | `boolean` | No | Filter subscribers by those subscribed/unsubscribed/pending/cleaned since last email campaign send. Member status is required to use this filter. |
 | `--unsubscribed-since` | `string` | No | Filter subscribers by those unsubscribed since a specific date. Using any status other than unsubscribed with this filter will result in an error. |
 
-#### `mailchimp lists list-merge-fields`
+#### `mcapi lists list-merge-fields`
 
 Get a list of all merge fields for an audience.
 
@@ -2732,7 +2732,7 @@ Get a list of all merge fields for an audience.
 | `--type` | `string` | No | The merge field type. |
 | `--required` | `boolean` | No | Whether it's a required merge field. |
 
-#### `mailchimp lists list-segment-members`
+#### `mcapi lists list-segment-members`
 
 Get information about members in a saved segment.
 
@@ -2750,7 +2750,7 @@ Get information about members in a saved segment.
 | `--include-transactional` | `boolean` | No | Include transactional members in response |
 | `--include-unsubscribed` | `boolean` | No | Include unsubscribed members in response |
 
-#### `mailchimp lists list-segments`
+#### `mcapi lists list-segments`
 
 Get information about all available segments for a specific list.
 
@@ -2773,7 +2773,7 @@ Get information about all available segments for a specific list.
 | `--before-updated-at` | `string` | No | Restrict results to segments update before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--exclude-type` | `saved | static | fuzzy` | No | Exclude results based on segment type. For example, use `exclude_type=static` to exclude tags from the response. |
 
-#### `mailchimp lists list-signup-forms`
+#### `mcapi lists list-signup-forms`
 
 Get signup forms for a specific list.
 
@@ -2783,7 +2783,7 @@ Get signup forms for a specific list.
 |------|------|----------|-------------|
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-surveys`
+#### `mcapi lists list-surveys`
 
 Get information about all available surveys for a specific list.
 
@@ -2793,7 +2793,7 @@ Get information about all available surveys for a specific list.
 |------|------|----------|-------------|
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists list-tag-search`
+#### `mcapi lists list-tag-search`
 
 Search for tags on a list by name. If no name is provided, will return all tags on the list.
 
@@ -2804,7 +2804,7 @@ Search for tags on a list by name. If no name is provided, will return all tags 
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--name` | `string` | No | The search query used to filter tags.  The search query will be compared to each tag as a prefix, so all tags that have a name starting with this field will be returned. |
 
-#### `mailchimp lists list-webhooks`
+#### `mcapi lists list-webhooks`
 
 Get information about all webhooks for a specific list.
 
@@ -2814,7 +2814,7 @@ Get information about all webhooks for a specific list.
 |------|------|----------|-------------|
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 
-#### `mailchimp lists update`
+#### `mcapi lists update`
 
 Update the settings for a specific list.
 
@@ -2825,7 +2825,7 @@ Update the settings for a specific list.
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-interest-category`
+#### `mcapi lists update-interest-category`
 
 Update a specific interest category.
 
@@ -2837,7 +2837,7 @@ Update a specific interest category.
 | `--interest-category-id` | `string` | Yes | The unique ID for the interest category. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-interest-category-interest`
+#### `mcapi lists update-interest-category-interest`
 
 Update interests or 'group names' for a specific category.
 
@@ -2850,7 +2850,7 @@ Update interests or 'group names' for a specific category.
 | `--interest-id` | `string` | Yes | The specific interest or 'group name'. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-member`
+#### `mcapi lists update-member`
 
 Update information for a specific list member.
 
@@ -2863,7 +2863,7 @@ Update information for a specific list member.
 | `--skip-merge-validation` | `boolean` | No | If skip_merge_validation is true, member data will be accepted without merge field values, even if the merge field is usually required. This defaults to false. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-member-note`
+#### `mcapi lists update-member-note`
 
 Update a specific note for a specific list member.
 
@@ -2876,7 +2876,7 @@ Update a specific note for a specific list member.
 | `--note-id` | `string` | Yes | The id for the note. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-merge-field`
+#### `mcapi lists update-merge-field`
 
 Update a specific merge field.
 
@@ -2888,7 +2888,7 @@ Update a specific merge field.
 | `--merge-id` | `string` | Yes | The id for the merge field. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-segment`
+#### `mcapi lists update-segment`
 
 Update a specific segment in a list.
 
@@ -2900,7 +2900,7 @@ Update a specific segment in a list.
 | `--segment-id` | `string` | Yes | The unique id for the segment. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-survey`
+#### `mcapi lists update-survey`
 
 Update a survey. When sections is provided, send the complete section list in display order. Any existing section not included is deleted.
 
@@ -2912,7 +2912,7 @@ Update a survey. When sections is provided, send the complete section list in di
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists update-webhook`
+#### `mcapi lists update-webhook`
 
 Update the settings for an existing webhook.
 
@@ -2924,7 +2924,7 @@ Update the settings for an existing webhook.
 | `--webhook-id` | `string` | Yes | The webhook's id. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp lists upsert-member`
+#### `mcapi lists upsert-member`
 
 Add or update a list member.
 
@@ -2939,9 +2939,9 @@ Add or update a list member.
 
 ---
 
-### `mailchimp ping`
+### `mcapi ping`
 
-#### `mailchimp ping list`
+#### `mcapi ping list`
 
 A health check for the API that won't return any account-specific information.
 
@@ -2949,9 +2949,9 @@ A health check for the API that won't return any account-specific information.
 
 ---
 
-### `mailchimp reporting`
+### `mcapi reporting`
 
-#### `mailchimp reporting get-facebook-ad`
+#### `mcapi reporting get-facebook-ad`
 
 Get report of a Facebook ad.
 
@@ -2963,7 +2963,7 @@ Get report of a Facebook ad.
 | `--outreach-id` | `string` | Yes | The outreach id. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp reporting get-landing-page`
+#### `mcapi reporting get-landing-page`
 
 Get report of a landing page.
 
@@ -2975,7 +2975,7 @@ Get report of a landing page.
 | `--outreach-id` | `string` | Yes | The outreach id. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp reporting get-survey`
+#### `mcapi reporting get-survey`
 
 Get report for a survey.
 
@@ -2987,7 +2987,7 @@ Get report for a survey.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp reporting get-survey-question`
+#### `mcapi reporting get-survey-question`
 
 Get report for a survey question.
 
@@ -3000,7 +3000,7 @@ Get report for a survey question.
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 | `--question-id` | `string` | Yes | The ID of the survey question. |
 
-#### `mailchimp reporting get-survey-respons`
+#### `mcapi reporting get-survey-respons`
 
 Get a single survey response.
 
@@ -3011,13 +3011,13 @@ Get a single survey response.
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 | `--response-id` | `string` | Yes | The ID of the survey response. |
 
-#### `mailchimp reporting list`
+#### `mcapi reporting list`
 
 Get information about the reporting endpoint's resources.
 
 `GET /3.0/reporting`
 
-#### `mailchimp reporting list-facebook-ad-ecommerce-product-activity`
+#### `mcapi reporting list-facebook-ad-ecommerce-product-activity`
 
 Get breakdown of product activity for an outreach.
 
@@ -3032,7 +3032,7 @@ Get breakdown of product activity for an outreach.
 | `--outreach-id` | `string` | Yes | The outreach id. |
 | `--sort-field` | `title | total_revenue | total_purchased` | No | Returns files sorted by the specified field. |
 
-#### `mailchimp reporting list-facebook-ads`
+#### `mcapi reporting list-facebook-ads`
 
 Get reports of Facebook ads.
 
@@ -3047,7 +3047,7 @@ Get reports of Facebook ads.
 | `--sort-field` | `created_at | updated_at | end_time` | No | Returns files sorted by the specified field. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp reporting list-landing-pages`
+#### `mcapi reporting list-landing-pages`
 
 Get reports of landing pages.
 
@@ -3060,7 +3060,7 @@ Get reports of landing pages.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp reporting list-survey-question-answers`
+#### `mcapi reporting list-survey-question-answers`
 
 Get answers for a survey question.
 
@@ -3074,7 +3074,7 @@ Get answers for a survey question.
 | `--question-id` | `string` | Yes | The ID of the survey question. |
 | `--respondent-familiarity-is` | `new | known | unknown` | No | Filter survey responses by familiarity of the respondents. |
 
-#### `mailchimp reporting list-survey-questions`
+#### `mcapi reporting list-survey-questions`
 
 Get reports for survey questions.
 
@@ -3086,7 +3086,7 @@ Get reports for survey questions.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp reporting list-survey-responses`
+#### `mcapi reporting list-survey-responses`
 
 Get responses to a survey.
 
@@ -3101,7 +3101,7 @@ Get responses to a survey.
 | `--chose-answer` | `string` | No | The ID of the option chosen to filter responses on. |
 | `--respondent-familiarity-is` | `new | known | unknown` | No | Filter survey responses by familiarity of the respondents. |
 
-#### `mailchimp reporting list-surveys`
+#### `mcapi reporting list-surveys`
 
 Get reports for surveys.
 
@@ -3116,9 +3116,9 @@ Get reports for surveys.
 
 ---
 
-### `mailchimp reports`
+### `mcapi reports`
 
-#### `mailchimp reports get`
+#### `mcapi reports get`
 
 Get report details for a specific sent campaign.
 
@@ -3130,7 +3130,7 @@ Get report details for a specific sent campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports get-abuse-report`
+#### `mcapi reports get-abuse-report`
 
 Get information about a specific abuse report for a campaign.
 
@@ -3143,7 +3143,7 @@ Get information about a specific abuse report for a campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--report-id` | `string` | Yes | The id for the abuse report. |
 
-#### `mailchimp reports get-click-detail`
+#### `mcapi reports get-click-detail`
 
 Get click details for a specific link in a campaign.
 
@@ -3157,7 +3157,7 @@ Get click details for a specific link in a campaign.
 | `--link-id` | `string` | Yes | The id for the link. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated bot clicks so the returned click counts reflect human clicks only, matching the in-app Recipient Activity view. Filtering changes a link's counts, but never removes a link from the response. Defaults to false (all clicks). |
 
-#### `mailchimp reports get-click-detail-member`
+#### `mcapi reports get-click-detail-member`
 
 Get information about a specific subscriber who clicked a link in a specific campaign.
 
@@ -3171,7 +3171,7 @@ Get information about a specific subscriber who clicked a link in a specific cam
 | `--link-id` | `string` | Yes | The id for the link. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp reports get-email-activity`
+#### `mcapi reports get-email-activity`
 
 Get a specific list member's activity in a campaign including opens, clicks, and bounces.
 
@@ -3186,7 +3186,7 @@ Get a specific list member's activity in a campaign including opens, clicks, and
 | `--since` | `string` | No | Restrict results to email activity events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated bot and Apple Mail Privacy Protection (MPP) proxy activity so the returned activity reflects human-only opens and clicks, matching the in-app Recipient Activity view. Filtering removes events from a member's activity, but never removes the member from the response. Defaults to false (all activity). |
 
-#### `mailchimp reports get-open-detail`
+#### `mcapi reports get-open-detail`
 
 Get information about a specific subscriber who opened a campaign.
 
@@ -3200,7 +3200,7 @@ Get information about a specific subscriber who opened a campaign.
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated (proxy/bot) opens so the returned open counts reflect human opens only, matching the in-app Recipient Activity view. A member whose opens are all automated is excluded from the human-only view. Defaults to false (all opens). |
 
-#### `mailchimp reports get-sent-to`
+#### `mcapi reports get-sent-to`
 
 Get information about a specific campaign recipient.
 
@@ -3213,7 +3213,7 @@ Get information about a specific campaign recipient.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp reports get-unsubscribed`
+#### `mcapi reports get-unsubscribed`
 
 Get information about a specific list member who unsubscribed from a campaign.
 
@@ -3226,7 +3226,7 @@ Get information about a specific list member who unsubscribed from a campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--subscriber-hash` | `string` | Yes | The MD5 hash of the lowercase version of the list member's email address. |
 
-#### `mailchimp reports list`
+#### `mcapi reports list`
 
 Get campaign reports.
 
@@ -3242,7 +3242,7 @@ Get campaign reports.
 | `--before-send-time` | `string (date-time)` | No | Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--since-send-time` | `string (date-time)` | No | Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 
-#### `mailchimp reports list-abuse-reports`
+#### `mcapi reports list-abuse-reports`
 
 Get a list of abuse complaints for a specific campaign.
 
@@ -3254,7 +3254,7 @@ Get a list of abuse complaints for a specific campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-advice`
+#### `mcapi reports list-advice`
 
 Get feedback based on a campaign's statistics. Advice feedback is based on campaign stats like opens, clicks, unsubscribes, bounces, and more.
 
@@ -3266,7 +3266,7 @@ Get feedback based on a campaign's statistics. Advice feedback is based on campa
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-click-detail-members`
+#### `mcapi reports list-click-detail-members`
 
 Get information about list members who clicked on a specific link in a campaign.
 
@@ -3281,7 +3281,7 @@ Get information about list members who clicked on a specific link in a campaign.
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--link-id` | `string` | Yes | The id for the link. |
 
-#### `mailchimp reports list-click-details`
+#### `mcapi reports list-click-details`
 
 Get information about clicks on specific links in your Mailchimp campaigns.
 
@@ -3298,7 +3298,7 @@ Get information about clicks on specific links in your Mailchimp campaigns.
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated bot clicks so the returned click counts reflect human clicks only, matching the in-app Recipient Activity view. Filtering changes a link's counts, but never removes a link from the response. Defaults to false (all clicks). |
 
-#### `mailchimp reports list-domain-performance`
+#### `mcapi reports list-domain-performance`
 
 Get statistics for the top-performing email domains in a campaign.
 
@@ -3310,7 +3310,7 @@ Get statistics for the top-performing email domains in a campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-ecommerce-product-activity`
+#### `mcapi reports list-ecommerce-product-activity`
 
 Get breakdown of product activity for a campaign
 
@@ -3325,7 +3325,7 @@ Get breakdown of product activity for a campaign
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 | `--sort-field` | `title | total_revenue | total_purchased` | No | Returns files sorted by the specified field. |
 
-#### `mailchimp reports list-eepurl`
+#### `mcapi reports list-eepurl`
 
 Get a summary of social activity for the campaign, tracked by EepURL.
 
@@ -3337,7 +3337,7 @@ Get a summary of social activity for the campaign, tracked by EepURL.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-email-activity`
+#### `mcapi reports list-email-activity`
 
 Get a list of member's subscriber activity in a specific campaign.
 
@@ -3353,7 +3353,7 @@ Get a list of member's subscriber activity in a specific campaign.
 | `--since` | `string` | No | Restrict results to email activity events that occur after a specific time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated bot and Apple Mail Privacy Protection (MPP) proxy activity so the returned activity reflects human-only opens and clicks, matching the in-app Recipient Activity view. Filtering removes events from a member's activity, but never removes the member from the response. Defaults to false (all activity). |
 
-#### `mailchimp reports list-locations`
+#### `mcapi reports list-locations`
 
 Get top open locations for a specific campaign.
 
@@ -3367,7 +3367,7 @@ Get top open locations for a specific campaign.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp reports list-open-details`
+#### `mcapi reports list-open-details`
 
 Get detailed information about any campaign emails that were opened by a list member.
 
@@ -3385,7 +3385,7 @@ Get detailed information about any campaign emails that were opened by a list me
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 | `--filter-bots` | `boolean` | No | When true, exclude automated (proxy/bot) opens so the returned open counts reflect human opens only, matching the in-app Recipient Activity view. A member whose opens are all automated is excluded from the human-only view. Defaults to false (all opens). |
 
-#### `mailchimp reports list-sent-to`
+#### `mcapi reports list-sent-to`
 
 Get information about campaign recipients.
 
@@ -3399,7 +3399,7 @@ Get information about campaign recipients.
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-sub-reports`
+#### `mcapi reports list-sub-reports`
 
 Get a list of reports with child campaigns for a specific parent campaign.
 
@@ -3411,7 +3411,7 @@ Get a list of reports with child campaigns for a specific parent campaign.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--campaign-id` | `string` | Yes | The unique id for the campaign. |
 
-#### `mailchimp reports list-unsubscribed`
+#### `mcapi reports list-unsubscribed`
 
 Get information about members who have unsubscribed from a specific campaign.
 
@@ -3427,9 +3427,9 @@ Get information about members who have unsubscribed from a specific campaign.
 
 ---
 
-### `mailchimp root`
+### `mcapi root`
 
-#### `mailchimp root list`
+#### `mcapi root list`
 
 Get links to all other resources available in the API.
 
@@ -3442,9 +3442,9 @@ Get links to all other resources available in the API.
 
 ---
 
-### `mailchimp search-campaigns`
+### `mcapi search-campaigns`
 
-#### `mailchimp search-campaigns list`
+#### `mcapi search-campaigns list`
 
 Search all campaigns for the specified query terms.
 
@@ -3458,9 +3458,9 @@ Search all campaigns for the specified query terms.
 
 ---
 
-### `mailchimp search-members`
+### `mcapi search-members`
 
-#### `mailchimp search-members list`
+#### `mcapi search-members list`
 
 Search for list members. This search can be restricted to a specific list, or can be used to search across all lists in an account.
 
@@ -3475,9 +3475,9 @@ Search for list members. This search can be restricted to a specific list, or ca
 
 ---
 
-### `mailchimp sms-campaigns`
+### `mcapi sms-campaigns`
 
-#### `mailchimp sms-campaigns create`
+#### `mcapi sms-campaigns create`
 
 Create a new SMS campaign.
 
@@ -3487,7 +3487,7 @@ Create a new SMS campaign.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp sms-campaigns create-action-cancel-send`
+#### `mcapi sms-campaigns create-action-cancel-send`
 
 Cancel a scheduled or sending SMS campaign.
 
@@ -3497,7 +3497,7 @@ Cancel a scheduled or sending SMS campaign.
 |------|------|----------|-------------|
 | `--sms-campaign-id` | `string` | Yes | The unique id for the SMS campaign. |
 
-#### `mailchimp sms-campaigns create-action-schedule`
+#### `mcapi sms-campaigns create-action-schedule`
 
 Schedule an SMS campaign for delivery.
 
@@ -3508,7 +3508,7 @@ Schedule an SMS campaign for delivery.
 | `--sms-campaign-id` | `string` | Yes | The unique id for the SMS campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp sms-campaigns create-action-send`
+#### `mcapi sms-campaigns create-action-send`
 
 Send an SMS campaign.
 
@@ -3518,7 +3518,7 @@ Send an SMS campaign.
 |------|------|----------|-------------|
 | `--sms-campaign-id` | `string` | Yes | The unique id for the SMS campaign. |
 
-#### `mailchimp sms-campaigns delete`
+#### `mcapi sms-campaigns delete`
 
 Remove a campaign from your Mailchimp account.
 
@@ -3528,7 +3528,7 @@ Remove a campaign from your Mailchimp account.
 |------|------|----------|-------------|
 | `--sms-campaign-id` | `string` | Yes | The unique id for the SMS campaign. |
 
-#### `mailchimp sms-campaigns get`
+#### `mcapi sms-campaigns get`
 
 Get the details for a single SMS campaign.
 
@@ -3540,7 +3540,7 @@ Get the details for a single SMS campaign.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp sms-campaigns get-content`
+#### `mcapi sms-campaigns get-content`
 
 Get the content for an SMS campaign.
 
@@ -3552,7 +3552,7 @@ Get the content for an SMS campaign.
 | `--fields` | `string[]` | No | A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation. |
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 
-#### `mailchimp sms-campaigns list`
+#### `mcapi sms-campaigns list`
 
 Get all SMS campaigns in an account.
 
@@ -3565,7 +3565,7 @@ Get all SMS campaigns in an account.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp sms-campaigns update`
+#### `mcapi sms-campaigns update`
 
 Update an SMS campaign.
 
@@ -3576,7 +3576,7 @@ Update an SMS campaign.
 | `--sms-campaign-id` | `string` | Yes | The unique id for the SMS campaign. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp sms-campaigns upsert-content`
+#### `mcapi sms-campaigns upsert-content`
 
 Set the content for an SMS campaign.
 
@@ -3589,9 +3589,9 @@ Set the content for an SMS campaign.
 
 ---
 
-### `mailchimp surveys`
+### `mcapi surveys`
 
-#### `mailchimp surveys create-list-survey-action-create-email`
+#### `mcapi surveys create-list-survey-action-create-email`
 
 Utilize the List ID and Survey ID to generate a Campaign that links to your survey.
 
@@ -3602,7 +3602,7 @@ Utilize the List ID and Survey ID to generate a Campaign that links to your surv
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp surveys create-list-survey-action-publish`
+#### `mcapi surveys create-list-survey-action-publish`
 
 Publish a survey that is in draft, unpublished, or has been previously published and edited.
 
@@ -3613,7 +3613,7 @@ Publish a survey that is in draft, unpublished, or has been previously published
 | `--list-id` | `string` | Yes | The unique ID for the list. |
 | `--survey-id` | `string` | Yes | The ID of the survey. |
 
-#### `mailchimp surveys create-list-survey-action-unpublish`
+#### `mcapi surveys create-list-survey-action-unpublish`
 
 Unpublish a survey that has been published.
 
@@ -3626,9 +3626,9 @@ Unpublish a survey that has been published.
 
 ---
 
-### `mailchimp template-folders`
+### `mcapi template-folders`
 
-#### `mailchimp template-folders create`
+#### `mcapi template-folders create`
 
 Create a new template folder.
 
@@ -3638,7 +3638,7 @@ Create a new template folder.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp template-folders delete`
+#### `mcapi template-folders delete`
 
 Delete a specific template folder, and mark all the templates in the folder as 'unfiled'.
 
@@ -3648,7 +3648,7 @@ Delete a specific template folder, and mark all the templates in the folder as '
 |------|------|----------|-------------|
 | `--folder-id` | `string` | Yes | The unique id for the template folder. |
 
-#### `mailchimp template-folders get`
+#### `mcapi template-folders get`
 
 Get information about a specific folder used to organize templates.
 
@@ -3660,7 +3660,7 @@ Get information about a specific folder used to organize templates.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--folder-id` | `string` | Yes | The unique id for the template folder. |
 
-#### `mailchimp template-folders list`
+#### `mcapi template-folders list`
 
 Get all folders used to organize templates.
 
@@ -3673,7 +3673,7 @@ Get all folders used to organize templates.
 | `--count` | `integer` | No | The number of records to return. Default value is 10. Maximum value is 1000 |
 | `--offset` | `integer` | No | Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this is the number of records from a collection to skip. Default value is 0. |
 
-#### `mailchimp template-folders update`
+#### `mcapi template-folders update`
 
 Update a specific folder used to organize templates.
 
@@ -3686,9 +3686,9 @@ Update a specific folder used to organize templates.
 
 ---
 
-### `mailchimp templates`
+### `mcapi templates`
 
-#### `mailchimp templates create`
+#### `mcapi templates create`
 
 Create a new template for the account. Only Classic templates are supported.
 
@@ -3698,7 +3698,7 @@ Create a new template for the account. Only Classic templates are supported.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp templates delete`
+#### `mcapi templates delete`
 
 Delete a specific template.
 
@@ -3708,7 +3708,7 @@ Delete a specific template.
 |------|------|----------|-------------|
 | `--template-id` | `string` | Yes | The unique id for the template. |
 
-#### `mailchimp templates get`
+#### `mcapi templates get`
 
 Get information about a specific template.
 
@@ -3720,7 +3720,7 @@ Get information about a specific template.
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--template-id` | `string` | Yes | The unique id for the template. |
 
-#### `mailchimp templates list`
+#### `mcapi templates list`
 
 Get a list of an account's available templates.
 
@@ -3742,7 +3742,7 @@ Get a list of an account's available templates.
 | `--content-type` | `html | template | multichannel` | No | Limit results based on how the template's content is put together. Only templates of type `user` can be filtered by `content_type`. If you want to retrieve saved templates created with the legacy email editor, then filter `content_type` to `template`. If you'd rather pull your saved templates for the new editor, filter to `multichannel`. For code your own templates, filter to `html`. |
 | `--sort-dir` | `ASC | DESC` | No | Determines the order direction for sorted results. |
 
-#### `mailchimp templates list-default-content`
+#### `mcapi templates list-default-content`
 
 Get the sections that you can edit in a template, including each section's default content.
 
@@ -3754,7 +3754,7 @@ Get the sections that you can edit in a template, including each section's defau
 | `--exclude-fields` | `string[]` | No | A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation. |
 | `--template-id` | `string` | Yes | The unique id for the template. |
 
-#### `mailchimp templates update`
+#### `mcapi templates update`
 
 Update the name, HTML, or `folder_id` of an existing template.
 
@@ -3767,9 +3767,9 @@ Update the name, HTML, or `folder_id` of an existing template.
 
 ---
 
-### `mailchimp verified-domains`
+### `mcapi verified-domains`
 
-#### `mailchimp verified-domains create`
+#### `mcapi verified-domains create`
 
 Add a domain to the account.
 
@@ -3779,7 +3779,7 @@ Add a domain to the account.
 |------|------|----------|-------------|
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp verified-domains create-action-verify`
+#### `mcapi verified-domains create-action-verify`
 
 Verify a domain for sending.
 
@@ -3790,7 +3790,7 @@ Verify a domain for sending.
 | `--domain-name` | `string` | Yes | The domain name. |
 | `--json` | `JSON` | Yes | Request body as JSON (or use individual body-field flags) |
 
-#### `mailchimp verified-domains delete`
+#### `mcapi verified-domains delete`
 
 Delete a verified domain from the account.
 
@@ -3800,7 +3800,7 @@ Delete a verified domain from the account.
 |------|------|----------|-------------|
 | `--domain-name` | `string` | Yes | The domain name. |
 
-#### `mailchimp verified-domains get`
+#### `mcapi verified-domains get`
 
 Get the details for a single domain on the account.
 
@@ -3810,7 +3810,7 @@ Get the details for a single domain on the account.
 |------|------|----------|-------------|
 | `--domain-name` | `string` | Yes | The domain name. |
 
-#### `mailchimp verified-domains list`
+#### `mcapi verified-domains list`
 
 Get all of the sending domains on the account.
 

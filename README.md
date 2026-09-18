@@ -36,7 +36,7 @@ If you prefer to build from source, install the [Rust toolchain](https://rustup.
 
 ```bash
 cargo build --release
-./target/release/mailchimp --help
+./target/release/mcapi --help
 ```
 
 ## Authentication
@@ -44,7 +44,7 @@ cargo build --release
 Set the following environment variable(s) before using the CLI:
 
 ```bash
-export MAILCHIMP_TOKEN="<your token>"
+export MCAPI_TOKEN="<your token>"
 ```
 
 A `.env` file in the working directory is also supported — the CLI auto-loads it on startup.
@@ -54,25 +54,25 @@ A `.env` file in the working directory is also supported — the CLI auto-loads 
 List available commands:
 
 ```bash
-mailchimp --help
+mcapi --help
 ```
 
 Call an API endpoint:
 
 ```bash
-mailchimp <resource> <method>
+mcapi <resource> <method>
 ```
 
-Run `mailchimp <resource> --help` to see available methods for a resource.
+Run `mcapi <resource> --help` to see available methods for a resource.
 
 ## Usage
 
-Every API resource appears as a subcommand (e.g. `mailchimp <resource> <method>`). Run `mailchimp <resource> --help` to see available methods.
+Every API resource appears as a subcommand (e.g. `mcapi <resource> <method>`). Run `mcapi <resource> --help` to see available methods.
 
 Provide request parameters as flags or as JSON:
 
 ```bash
-mailchimp <resource> <method> --json '{"key": "value"}'
+mcapi <resource> <method> --json '{"key": "value"}'
 ```
 
 ## Documentation
@@ -101,11 +101,11 @@ These flags are available on every operation:
 
 | Variable | Description |
 |----------|-------------|
-| `MAILCHIMP_BASE_URL` | Override the API base URL |
-| `MAILCHIMP_CA_BUNDLE` | Path to PEM file with extra trust roots (or `SSL_CERT_FILE`) |
-| `MAILCHIMP_INSECURE=1` | Skip TLS verification (debugging only) |
-| `MAILCHIMP_PROXY` | HTTP(S) proxy URL |
-| `MAILCHIMP_TIMEOUT_SECS` | Total request timeout in seconds |
+| `MCAPI_BASE_URL` | Override the API base URL |
+| `MCAPI_CA_BUNDLE` | Path to PEM file with extra trust roots (or `SSL_CERT_FILE`) |
+| `MCAPI_INSECURE=1` | Skip TLS verification (debugging only) |
+| `MCAPI_PROXY` | HTTP(S) proxy URL |
+| `MCAPI_TIMEOUT_SECS` | Total request timeout in seconds |
 
 Standard environment variables (`HTTPS_PROXY` / `HTTP_PROXY` / `NO_PROXY` / `SSL_CERT_FILE`) are also honored.
 
@@ -117,13 +117,13 @@ Without `--format`, output (including errors) is `table` when stdout is a termin
 
 ```bash
 # Pipe JSON output through jq
-mailchimp <resource> <method> --format json | jq
+mcapi <resource> <method> --format json | jq
 
 # Keep the human rendering even when piped
-mailchimp <resource> <method> --human | less
+mcapi <resource> <method> --human | less
 
 # Machine-readable catalog of every operation (same as --schema)
-mailchimp --help --format json | jq '.operations | length'
+mcapi --help --format json | jq '.operations | length'
 ```
 
 ### Shell completion
@@ -131,7 +131,7 @@ mailchimp --help --format json | jq '.operations | length'
 Generate shell completion scripts:
 
 ```bash
-mailchimp completion <bash|zsh|fish|powershell>
+mcapi completion <bash|zsh|fish|powershell>
 ```
 
 ## Attribution

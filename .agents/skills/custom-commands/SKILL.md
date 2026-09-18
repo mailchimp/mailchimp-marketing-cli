@@ -1,13 +1,13 @@
 ---
-name: mailchimp-custom-commands
-description: How to author custom commands for the mailchimp CLI using the co-generated SDK.
+name: mcapi-custom-commands
+description: How to author custom commands for the mcapi CLI using the co-generated SDK.
 ---
 
-# Custom Commands for `mailchimp`
+# Custom Commands for `mcapi`
 
 ## Overview
 
-The `mailchimp` CLI supports user-authored custom commands that are
+The `mcapi` CLI supports user-authored custom commands that are
 compiled into the binary alongside the auto-generated API commands.
 Custom commands get a fully-wired SDK client that inherits the CLI's
 auth, retries, TLS, base URL, and global headers — zero configuration required.
@@ -15,22 +15,22 @@ auth, retries, TLS, base URL, and global headers — zero configuration required
 ## Architecture
 
 ```
-cli/mailchimp/custom.rs    ← Your command handlers (protected by .fernignore)
-cli/mailchimp/sdk.rs       ← Generated bridge: client() + block_on()
-cli/mailchimp/main.rs      ← Generated entrypoint (calls custom::register)
-mailchimp-sdk/             ← Co-generated typed SDK crate
-mailchimp-types/           ← Co-generated typed model crate
+cli/mcapi/custom.rs    ← Your command handlers (protected by .fernignore)
+cli/mcapi/sdk.rs       ← Generated bridge: client() + block_on()
+cli/mcapi/main.rs      ← Generated entrypoint (calls custom::register)
+mcapi-sdk/             ← Co-generated typed SDK crate
+mcapi-types/           ← Co-generated typed model crate
 ```
 
 ## Adding a Custom Command
 
-### 1. Edit `cli/mailchimp/custom.rs`
+### 1. Edit `cli/mcapi/custom.rs`
 
 This file is protected by `.fernignore` — `fern generate` will never
 overwrite it. Register commands in the `register()` function:
 
 ```rust
-use mailchimp_sdk::api::*;
+use mcapi_sdk::api::*;
 
 pub fn register(app: CliApp) -> CliApp {
     let app = app.command(
@@ -53,12 +53,12 @@ pub fn register(app: CliApp) -> CliApp {
 
 ### 2. Available SDK Clients
 
-The `super::sdk::client(ctx)` call returns a `mailchimp_sdk::api::Client`
+The `super::sdk::client(ctx)` call returns a `mcapi_sdk::api::Client`
 with the following sub-clients:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `client.audiences` | `mailchimp_sdk::api::AudiencesClient` | audiences operations |
+| `client.audiences` | `mcapi_sdk::api::AudiencesClient` | audiences operations |
 
 ### 3. Key Patterns
 
@@ -76,7 +76,7 @@ let result = super::sdk::block_on(
 
 **Use typed models for request/response serialization:**
 ```rust
-use mailchimp_sdk::api::*;
+use mcapi_sdk::api::*;
 ```
 
 ### 4. Authentication
@@ -84,7 +84,7 @@ use mailchimp_sdk::api::*;
 Custom commands automatically inherit the CLI's authentication.
 The following auth schemes are configured:
 
-- **bearerToken** (bearer): env `MAILCHIMP_TOKEN`
+- **bearerToken** (bearer): env `MCAPI_TOKEN`
 
 No manual auth wiring is needed in custom command handlers.
 
@@ -92,11 +92,11 @@ No manual auth wiring is needed in custom command handlers.
 
 | File | Regenerated? | Notes |
 |------|-------------|-------|
-| `cli/mailchimp/custom.rs` | **No** | Protected by `.fernignore` |
-| `cli/mailchimp/sdk.rs` | Yes | Bridges AppContext → SDK client |
-| `cli/mailchimp/main.rs` | Yes | Calls `custom::register(app)` |
-| `mailchimp-sdk/` | Yes | Co-generated typed SDK crate |
-| `mailchimp-types/` | Yes | Co-generated typed models |
+| `cli/mcapi/custom.rs` | **No** | Protected by `.fernignore` |
+| `cli/mcapi/sdk.rs` | Yes | Bridges AppContext → SDK client |
+| `cli/mcapi/main.rs` | Yes | Calls `custom::register(app)` |
+| `mcapi-sdk/` | Yes | Co-generated typed SDK crate |
+| `mcapi-types/` | Yes | Co-generated typed models |
 
 After running `fern generate`, your `custom.rs` is preserved. All
 generated code (SDK, types, glue, main.rs) is updated to match the
@@ -110,8 +110,8 @@ sub-clients), update your `custom.rs` to match.
 cargo build
 
 # Run your custom command
-mailchimp <your-command> [args]
+mcapi <your-command> [args]
 
 # Run with verbose output for debugging
-RUST_LOG=debug mailchimp <your-command> [args]
+RUST_LOG=debug mcapi <your-command> [args]
 ```
