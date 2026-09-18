@@ -494,7 +494,7 @@ checksum = "9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6"
 
 [[package]]
 name = "fern-cli-sdk"
-version = "0.0.145"
+version = "0.0.212"
 dependencies = [
  "anyhow",
  "base64",
@@ -511,7 +511,7 @@ dependencies = [
  "jmespath",
  "keyring",
  "libc",
- "mcapi_sdk",
+ "mailchimp_sdk",
  "num-bigint",
  "ordered-float",
  "percent-encoding",
@@ -3266,7 +3266,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa"
 
 [[package]]
-name = "mcapi_types"
+name = "mailchimp_types"
 version = "0.0.0"
 dependencies = [
  "base64",
@@ -3278,13 +3278,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "mcapi_sdk"
+name = "mailchimp_sdk"
 version = "0.1.0"
 dependencies = [
  "bytes",
  "chrono",
  "futures",
- "mcapi_types",
+ "mailchimp_types",
  "reqwest",
  "serde",
  "serde_json",

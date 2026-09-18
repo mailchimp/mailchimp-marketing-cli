@@ -36,7 +36,7 @@ If you prefer to build from source, install the [Rust toolchain](https://rustup.
 
 ```bash
 cargo build --release
-./target/release/mcapi --help
+./target/release/mailchimp --help
 ```
 
 ## Authentication
@@ -44,7 +44,7 @@ cargo build --release
 Set the following environment variable(s) before using the CLI:
 
 ```bash
-export MCAPI_TOKEN="<your token>"
+export MAILCHIMP_TOKEN="<your token>"
 ```
 
 A `.env` file in the working directory is also supported — the CLI auto-loads it on startup.
@@ -54,25 +54,25 @@ A `.env` file in the working directory is also supported — the CLI auto-loads 
 List available commands:
 
 ```bash
-mcapi --help
+mailchimp --help
 ```
 
 Call an API endpoint:
 
 ```bash
-mcapi <resource> <method>
+mailchimp <resource> <method>
 ```
 
-Run `mcapi <resource> --help` to see available methods for a resource.
+Run `mailchimp <resource> --help` to see available methods for a resource.
 
 ## Usage
 
-Every API resource appears as a subcommand (e.g. `mcapi <resource> <method>`). Run `mcapi <resource> --help` to see available methods.
+Every API resource appears as a subcommand (e.g. `mailchimp <resource> <method>`). Run `mailchimp <resource> --help` to see available methods.
 
 Provide request parameters as flags or as JSON:
 
 ```bash
-mcapi <resource> <method> --json '{"key": "value"}'
+mailchimp <resource> <method> --json '{"key": "value"}'
 ```
 
 ## Documentation
@@ -93,34 +93,19 @@ These flags are available on every operation:
 | `--format <json\|table\|yaml\|csv>` | Output format (default `json`) |
 | `--output <PATH>` | Write binary responses to a file |
 | `--base-url <URL>` | Override the API base URL |
-| `--no-extract` | Print the full response body instead of the `x-fern-sdk-return-value` extraction |
-| `--no-retry` | Disable retries declared by `x-fern-retries`, including network errors |
-| `-q, --quiet` | Suppress stdout output on success (errors still go to stderr) |
-
-Operations the spec describes how to page (via `x-fern-pagination` or a root `page_token` parameter) also accept:
-
-| Flag | Description |
-|------|-------------|
 | `--page-all` | Auto-paginate and stream results as NDJSON |
 | `--page-limit <N>` | Max pages to fetch when auto-paginating (default `10`) |
-| `--page-delay <MS>` | Delay between page fetches in milliseconds (default `100`) |
-| `--no-pager` | Disable the pager even on interactive terminals |
-
-Operations the spec marks as streaming (via `x-fern-streaming`) also accept:
-
-| Flag | Description |
-|------|-------------|
-| `--no-stream` | Buffer the streaming response and print it as a single value once complete |
+| `-q, --quiet` | Suppress stdout output on success (errors still go to stderr) |
 
 ### Environment variables
 
 | Variable | Description |
 |----------|-------------|
-| `MCAPI_BASE_URL` | Override the API base URL |
-| `MCAPI_CA_BUNDLE` | Path to PEM file with extra trust roots (or `SSL_CERT_FILE`) |
-| `MCAPI_INSECURE=1` | Skip TLS verification (debugging only) |
-| `MCAPI_PROXY` | HTTP(S) proxy URL |
-| `MCAPI_TIMEOUT_SECS` | Total request timeout in seconds |
+| `MAILCHIMP_BASE_URL` | Override the API base URL |
+| `MAILCHIMP_CA_BUNDLE` | Path to PEM file with extra trust roots (or `SSL_CERT_FILE`) |
+| `MAILCHIMP_INSECURE=1` | Skip TLS verification (debugging only) |
+| `MAILCHIMP_PROXY` | HTTP(S) proxy URL |
+| `MAILCHIMP_TIMEOUT_SECS` | Total request timeout in seconds |
 
 Standard environment variables (`HTTPS_PROXY` / `HTTP_PROXY` / `NO_PROXY` / `SSL_CERT_FILE`) are also honored.
 
@@ -132,13 +117,13 @@ Without `--format`, output (including errors) is `table` when stdout is a termin
 
 ```bash
 # Pipe JSON output through jq
-mcapi <resource> <method> --format json | jq
+mailchimp <resource> <method> --format json | jq
 
 # Keep the human rendering even when piped
-mcapi <resource> <method> --human | less
+mailchimp <resource> <method> --human | less
 
 # Machine-readable catalog of every operation (same as --schema)
-mcapi --help --format json | jq '.operations | length'
+mailchimp --help --format json | jq '.operations | length'
 ```
 
 ### Shell completion
@@ -146,7 +131,7 @@ mcapi --help --format json | jq '.operations | length'
 Generate shell completion scripts:
 
 ```bash
-mcapi completion <bash|zsh|fish|powershell>
+mailchimp completion <bash|zsh|fish|powershell>
 ```
 
 ## Attribution
